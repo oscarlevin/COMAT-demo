@@ -3,20 +3,15 @@
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
-
   <book xml:id="my-great-book">
     <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
 
+    <subtitle>An example to get you started</subtitle>
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
-
     <!-- Include chapters -->
     <xi:include href="./ch-chapter-title.ptx" />
-
-
     <!-- Include backmatter -->
-    <xi:include href="./backmatterr.ptx" />
-
+    <xi:include href="./backmatter.ptx" />
   </book>
 </pretext>
