@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-01-01T10:49:20-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">5.2.3.1</span>
+</h6>
+<p>We could do long division, but there is another way. We want to find \(x\) such that \(x \equiv 3491 \pmod{9}\text{.}\) Now \(3491 = 3000 + 400 + 90 + 1\text{.}\) Of course \(90 \equiv 0 \pmod 9\text{,}\) so we can replace the 90 in the sum with 0. Why is this okay? We are actually subtracting the “same” thing from both sides:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}x \amp  \equiv 3000 + 400 + 90 + 1 \pmod 9 \\
+- ~~ 0 \amp  \equiv 90 \pmod 9 \\
+x \amp  \equiv 3000 + 400 + 0 + 1\pmod 9.
+\end{aligned}
+\end{equation*}
+</div>
+<p>Next, note that \(400 = 4 \cdot 100\text{,}\) and \(100 \equiv 1 \pmod 9\) (since \(9 \mid 99\)). So we can in fact replace the 400 with simply a 4. Again, we are appealing to our claim that we can replace congruent elements, but we are really appealing to property 3 about the arithmetic of congruence: we know \(100 \equiv 1 \pmod{9}\text{,}\) so if we multiply both sides by \(4\text{,}\) we get \(400 \equiv 4 \pmod 9\text{.}\)</p>
+<p>Similarly, we can replace 3000 with 3, since \(1000 = 1 + 999 \equiv 1 \pmod 9\text{.}\) So our original congruence becomes</p>
+<div class="displaymath">
+\begin{equation*}
+x \equiv 3 + 4 + 0 + 1 \pmod 9
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x \equiv 8 \pmod 9\text{.}
+\end{equation*}
+</div>
+<p>Therefore \(3491\) divided by 9 has remainder 8.</p>
+</div>
+<span class="incontext"><a href="sec_addtops-numbth.html#iSc">in-context</a></span>
+</body>
+</html>

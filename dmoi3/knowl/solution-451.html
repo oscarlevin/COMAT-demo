@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-01-01T10:49:11-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">4.6.2.1</span>
+</h6>
+<p>Doing this directly would be difficult, but we can use the matching condition to help. Construct a graph \(G\) with 13 vertices in the set \(A\text{,}\) each representing one of the 13 card values, and 13 vertices in the set \(B\text{,}\) each representing one of the 13 piles. Draw an edge between a vertex \(a \in A\) to a vertex \(b \in B\) if a card with value \(a\) is in the pile \(b\text{.}\) Notice that we are just looking for a matching of \(A\text{;}\) each value needs to be found in the piles exactly once.</p>
+<p>We will have a matching if the matching condition holds. Given any set of card values (a set \(S \subseteq A\)) we must show that \(|N(S)| \ge |S|\text{.}\) That is, the number of piles that contain those values is at least the number of different values. But what if it wasn't? Say \(|S| = k\text{.}\) If \(|N(S)| \lt k\text{,}\) then we would have fewer than \(4k\) different cards in those piles (since each pile contains 4 cards). But there are \(4k\) cards with the \(k\) different values, so at least one of these cards must be in another pile, a contradiction. Thus the matching condition holds, so there is a matching, as required.</p>
+</div>
+<span class="incontext"><a href="sec_matchings.html#xNF">in-context</a></span>
+</body>
+</html>
