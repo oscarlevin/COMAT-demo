@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-01-01T10:47:43-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Definitions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:uw-slr5ay1u';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-5.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics</span><span class="subtitle">An Open Introduction, 3rd edition</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_graphtheory.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_graphtheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_trees.html" title="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_graphtheory.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_graphtheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_trees.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="qaP"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="WhY">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="Cph">How to use this book</a></li>
+</ul>
+<h2 class="link"><a href="ch_intro.html" data-scroll="csJ"><span class="codenumber">0</span> <span class="title">Introduction and Preliminaries</span></a></h2>
+<ul>
+<li><a href="sec_intro-intro.html" data-scroll="NGK">What is Discrete Mathematics?</a></li>
+<li><a href="sec_intro-statements.html" data-scroll="xzK">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="leb">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="BUV">Functions</a></li>
+</ul>
+<h2 class="link"><a href="ch_counting.html" data-scroll="Pux"><span class="codenumber">1</span> <span class="title">Counting</span></a></h2>
+<ul>
+<li><a href="sec_counting-addmult.html" data-scroll="VUd">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="Zkv">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="Hvm">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="ItB">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="fJO">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="kVX">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="qLw">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_sequences.html" data-scroll="iRP"><span class="codenumber">2</span> <span class="title">Sequences</span></a></h2>
+<ul>
+<li><a href="sec_seq_intro.html" data-scroll="mrl">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="QQl">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="Skm">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="vbq">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="jpB">Induction</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="rZt">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_logic.html" data-scroll="UOk"><span class="codenumber">3</span> <span class="title">Symbolic Logic and Proofs</span></a></h2>
+<ul>
+<li><a href="sec_propositional.html" data-scroll="suF">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="Ves">Proofs</a></li>
+<li><a href="sec_logic-conc.html" data-scroll="uMv">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_graphtheory.html" data-scroll="EVs"><span class="codenumber">4</span> <span class="title">Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_gt-intro.html" data-scroll="RdG" class="active">Definitions</a></li>
+<li><a href="sec_trees.html" data-scroll="sec_trees">Trees</a></li>
+<li><a href="sec_planar.html" data-scroll="ctW">Planar Graphs</a></li>
+<li><a href="sec_coloring.html" data-scroll="fYj">Coloring</a></li>
+<li><a href="sec_paths.html" data-scroll="cPv">Euler Paths and Circuits</a></li>
+<li><a href="sec_matchings.html" data-scroll="MWD">Matching in Bipartite Graphs</a></li>
+<li><a href="sec_gt-conc.html" data-scroll="Dab">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_additionalTopics.html" data-scroll="jno"><span class="codenumber">5</span> <span class="title">Additional Topics</span></a></h2>
+<ul>
+<li><a href="sec_addtops-genfun.html" data-scroll="ShZ">Generating Functions</a></li>
+<li><a href="sec_addtops-numbth.html" data-scroll="JFy">Introduction to Number Theory</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="qRN"><span class="title">Backmatter</span></a></h2>
+<h2 class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></h2>
+<h2 class="link"><a href="solutions-2.html" data-scroll="WYW"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></h2>
+<h2 class="link"><a href="appendix-1.html" data-scroll="KKE"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></h2>
+<h2 class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></h2>
+<h2 class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="RdG"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Definitions</span>
+</h2>
+<a href="sec_gt-intro.html" class="permalink">¶</a><article class="project-like" id="cmF"><h6 class="heading">
+<span class="type">Investigate!</span> <span class="codenumber">4.2</span>
+</h6>
+<p id="fvG">Which (if any) of the graphs below are the same?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1%;margin-right:1%;">
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-69.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-70.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-71.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="LCP">The graphs above are unlabeled. Usually we think of a graph as having a specific set of vertices. Which (if any) of the graphs below are the same?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.5%;margin-right:3.5%;">
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-74.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-75.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-76.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-77.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="rJY">Actually, all the graphs we have seen above are just <em class="emphasis">drawings</em> of graphs. A graph is really an abstract mathematical object consisting of two sets \(V\) and \(E\) where \(E\) is a set of 2-element subsets of \(V\text{.}\) Are the graphs below the same or different?</p>
+<dl class="description-list-narrow">
+<dt id="Fzi">Graph 1:</dt>
+<dd>
+<p id="wPq">\(V = \{a, b, c, d, e\}\text{,}\)</p>
+<p id="cWz">\(E = \{\{a,b\}, \{a, c\}, \{a,d\}, \{a,e\}, \{b,c\}, \{d,e\}\}\text{.}\)</p>
+</dd>
+<dt id="lGr">Graph 2:</dt>
+<dd>
+<p id="JdI">\(V = \{v_1, v_2, v_3, v_4, v_5\}\text{,}\)</p>
+<p id="pkR">\(E = \{\{v_1, v_3\}, \{v_1, v_5\}, \{v_2, v_4\}, \{v_2, v_5\}, \{v_3, v_5\}, \{v_4, v_5\}\}\text{.}\)</p>
+</dd>
+</dl></article><p id="oPs">Before we start studying graphs, we need to agree upon what a graph is.  		While we almost always think of graphs as pictures (dots connected by lines) this is fairly ambiguous. Do the lines need to be straight? Does it matter how long the lines are or how large the dots are? Can there be two lines connecting the same pair of dots? Can one line connect three dots?</p>
+<p id="UWB">The way we avoid ambiguities in mathematics is to provide concrete and rigorous <em class="emphasis">definitions</em>. Crafting good definitions is not easy, but it is incredibly important. The definition is the agreed upon starting point from which all truths in mathematics proceed. Is there a graph with no edges? We have to look at the definition to see if this is possible.</p>
+<p id="BdK">We want our definition to be precise and unambiguous, but it also must agree with our intuition for the objects we are studying. It needs to be useful: we <em class="emphasis">could</em> define a graph to be a six legged mammal, but that would not let us solve any problems about bridges. Instead, here is the (now) standard definition of a graph.</p>
+<article class="assemblage-like" id="Jzh"><h6 class="heading"><span class="title">Graph Definition</span></h6>
+<p id="kfz">A <dfn class="terminology">graph</dfn> is an ordered pair \(G = (V, E)\) consisting of a nonempty set \(V\) (called the <dfn class="terminology">vertices</dfn>) and a set \(E\) (called the <dfn class="terminology">edges</dfn>) of two-element subsets of \(V\text{.}\)</p></article><p id="hkT">Strange. Nowhere in the definition is there talk of dots or lines. From the definition, a graph could be</p>
+<div class="displaymath">
+\begin{equation*}
+(\{a,b,c,d\}, \{\{a,b\}, \{a,c\}, \{b,c\}, \{b,d\}, \{c,d\}\})\text{.}
+\end{equation*}
+</div>
+<p>Here we have a graph with four vertices (the letters \(a, b, c, d\)) and five edges (the pairs \(\{a,b\}, \{a,c\}, \{b,c\}, \{b,d\}, \{c,d\})\)).</p>
+<p id="Nsc">Looking at sets and sets of 2-element sets is difficult to process. That is why we often draw a representation of these sets. We put a dot down for each vertex, and connect two dots with a line precisely when those two vertices are one of the 2-element subsets in our set of edges. Thus one way to draw the graph described above is this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-78.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="tzl">However we could also have drawn the graph differently. For example either of these:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:13.75%;margin-right:13.75%;">
+<div class="sbspanel" style="width:27.5862068965517%;justify-content:flex-end;"><img src="images/image-79.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:34.4827586206897%;justify-content:flex-end;"><img src="images/image-80.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="ZGu">We should be careful about what it means for two graphs to be “the same.” Actually, given our definition, this is easy: Are the vertex sets equal? Are the edge sets equal? We know what it means for sets to be equal, and graphs are nothing but a pair of two special sorts of sets.</p>
+<article class="example-like" id="ibR"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.1.1</span>
+</h6>
+<p id="WbU">Are the graphs below equal?</p>
+<div class="displaymath">
+\begin{equation*}
+G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c, b\}\})
+\end{equation*}
+</div>
+<p>equal?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-ItO" id="ItO"><span class="type">Solution</span></a><div id="hk-ItO" class="hidden-content tex2jax_ignore"><div class="solution"><p id="AtQ">No. Here the vertex sets of each graph are equal, which is a good start. Also, both graphs have two edges. In the first graph, we have edges \(\{a,b\}\) and \(\{b,c\}\text{,}\) while in the second graph we have edges	\(\{a,c\}\) and 	\(\{c,b\}\text{.}\) Now we do have \(\{b,c\} = \{c,b\}\text{,}\) so that is not the problem. The issue is that \(\{a,b\} \ne \{a,c\}\text{.}\) Since the edge sets of the two graphs are not equal (as sets), the graphs are not equal (as graphs).</p></div></div>
+</div></article><p id="FND">Even if two graphs are not <em class="emphasis">equal</em>, they might be <em class="emphasis">basically</em> the same. The graphs in the previous example could be drawn like this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-81.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="lUM">Graphs that are basically the same (but perhaps not equal) are called <dfn class="terminology">isomorphic</dfn>. We will give a precise definition of this term after a quick example:</p>
+<article class="example-like" id="Oja"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.1.2</span>
+</h6>
+<p id="Cjd">Consider the graphs:</p>
+<blockquote class="blockquote" id="UIg">
+<p id="JNC">\(G_1 = \{V_1, E_1\}\) where \(V_1 = \{a, b, c\}\) and \(E_1 = \{\{a,b\}, \{a,c\}, \{b,c\}\}\text{;}\)</p>
+<p id="pUL">\(G_2 = \{V_2, E_2\}\) where \(V_2 = \{u,v,w\}\) and \(E_2 = \{\{u,v\}, \{u,w\}, \{v,w\}\}\text{.}\)</p>
+</blockquote>
+<p id="iqm">Are these graphs the same?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-oAX" id="oAX"><span class="type">Solution</span></a><div id="hk-oAX" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="gAZ">The two graphs are NOT equal. It is enough to notice that \(V_1 \ne V_2\) since \(a \in V_1\) but \(a \notin V_2\text{.}\) However, both of these graphs consist of three vertices with edges connecting every pair of vertices. We can draw them as follows:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/image-82.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/image-83.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="MIi">Clearly we want to say these graphs are basically the same, so while they are not equal, they will be <em class="emphasis">isomorphic</em>. The reason is we can rename the vertices of one graph and get the second graph as the result.</p>
+</div></div>
+</div></article><p id="SbV">Intuitively, graphs are <dfn class="terminology">isomorphic</dfn>  if they are basically the same, or better yet, if they are the same except for the names of the vertices. To make the concept of renaming vertices precise, we give the following definitions:</p>
+<article class="assemblage-like" id="pGq"><h6 class="heading"><span class="title">Isomorphic Graphs</span></h6>
+<p id="QmI">An <dfn class="terminology">isomorphism</dfn>  between two graphs \(G_1\) and \(G_2\) is a bijection \(f:V_1 \to V_2\) between the vertices of the graphs such that if \(\{a,b\}\) is an edge in \(G_1\) then \(\{f(a), f(b)\}\) is an edge in \(G_2\text{.}\)</p>
+<p id="wtR">Two graphs are <dfn class="terminology">isomorphic</dfn> if there is an isomorphism between them. In this case we write \(G_1 \isom G_2\text{.}\)</p></article><p id="yje">An isomorphism is simply a function which renames the vertices. It must be a bijection so every vertex gets a new name. These newly named vertices must be connected by edges precisely if they were connected by edges with their old names.</p>
+<article class="example-like" id="uqj"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.1.3</span>
+</h6>
+<p id="Oxv">Decide whether the graphs \(G_1 = \{V_1, E_1\}\) and \(G_2 = \{V_2, E_2\}\) are equal or isomorphic.</p>
+<p id="uEE">\(V_1 = \{a,b,c,d\}\text{,}\) \(E_1 = \{\{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}\}\)</p>
+<p id="aLN">\(V_2 = \{a,b,c,d\}\text{,}\) \(E_2 = \{\{a,b\}, \{a,c\}, \{b,c\}, \{c,d\}\}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-APp" id="APp"><span class="type">Solution</span></a><div id="hk-APp" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="sPr">The graphs are NOT equal, since \(\{a,d\} \in E_1\) but \(\{a,d\} \notin E_2\text{.}\) However, since both graphs contain the same number of vertices and same number of edges, they <em class="emphasis">might</em> be isomorphic (this is not enough in most cases, but it is a good start).</p>
+<p id="YWA">We can try to build an isomorphism. How about we say \(f(a) = b\text{,}\) \(f(b) = c\text{,}\) \(f(c) = d\) and \(f(d) = a\text{.}\) This is definitely a bijection, but to make sure that the function is an isomorphism, we must make sure it <em class="emphasis">respects the edge relation</em>. In \(G_1\text{,}\) vertices \(a\) and \(b\) are connected by an edge. In \(G_2\text{,}\) \(f(a) = b\) and \(f(b) = c\) are connected by an edge. So far, so good, but we must check the other three edges. The edge \(\{a,c\}\) in \(G_1\) corresponds to \(\{f(a),
+f(c)\} = \{b,d\}\text{,}\) but here we have a problem. There is no edge between \(b\) and \(d\) in \(G_2\text{.}\) Thus \(f\) is NOT an isomorphism.</p>
+<p id="FdJ">Not all hope is lost, however. Just because \(f\) is not an isomorphism does not mean that there is no isomorphism at all. We can try again. At this point it might be helpful to draw the graphs to see how they should match up.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:13.5%;margin-right:13.5%;">
+<div class="sbspanel" style="width:31.5068493150685%;justify-content:flex-end;"><img src="images/image-84.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:31.5068493150685%;justify-content:flex-end;"><img src="images/image-85.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="lkS">Alternatively, notice that in \(G_1\text{,}\) the vertex \(a\) is adjacent to every other vertex. In \(G_2\text{,}\) there is also a vertex with this property: \(c\text{.}\) So build the bijection \(g:V_1 \to V_2\) by defining \(g(a) = c\) to start with. Next, where should we send \(b\text{?}\) In \(G_1\text{,}\) the vertex \(b\) is only adjacent to vertex \(a\text{.}\) There is exactly one vertex like this in \(G_2\text{,}\) namely \(d\text{.}\) So let \(g(b) = d\text{.}\) As for the last two, in this example, we have a free choice: let \(g(c) = b\) and \(g(d) = a\) (switching these would be fine as well).</p>
+<p id="Rsb">We should check that this really is an isomorphism. It is definitely a bijection. We must make sure that the edges are respected. The four edges in \(G_1\) are</p>
+<div class="displaymath">
+\begin{equation*}
+\{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}
+\end{equation*}
+</div>
+<p id="xzk">Under the proposed isomorphism these become</p>
+<div class="displaymath">
+\begin{equation*}
+\{g(a), g(b)\}, \{g(a), g(c)\}, \{g(a), g(d)\}, \{g(c), g(d)\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\{c,d\}, \{c,b\}, \{c,a\}, \{b,a\}
+\end{equation*}
+</div>
+<p>which are precisely the edges in \(G_2\text{.}\) Thus \(g\) is an isomorphism, so \(G_1 \cong G_2\)</p>
+</div></div>
+</div></article><p id="eqn">Sometimes we will talk about a graph with a special name (like \(K_n\) or the <em class="emphasis">Peterson graph</em>) or perhaps draw a graph without any labels. In this case we are really referring to <em class="emphasis">all</em> graphs isomorphic to any copy of that particular graph. A collection of isomorphic graphs is often called an <dfn class="terminology">isomorphism class</dfn>.  <a knowl="" class="id-ref" refid="hk-fn-14" id="fn-14"><sup> 1 </sup></a><span id="hk-fn-14" class="hidden-content tex2jax_ignore"><span class="footnote">This is not unlike geometry, where we might have more than one copy of a particular triangle. There instead of <em class="emphasis">isomorphic</em> we say <em class="emphasis">congruent</em>.</span></span></p>
+<p id="Kxw">There are other relationships between graphs that we care about, other than equality and being isomorphic. For example, compare the following pair of graphs:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-86.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-87.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="qEF">These are definitely not isomorphic, but notice that the graph on the right looks like it might be part of the graph on the left, especially if we draw it like this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-88.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="WLO">We would like to say that the smaller graph is a <em class="emphasis">subgraph</em> of the larger.</p>
+<p id="CSX">We should give a careful definition of this. In fact, there are two reasonable notions for what a subgroup should mean.</p>
+<article class="assemblage-like" id="VNz"><h6 class="heading"><span class="title">Subgraphs</span></h6>
+<p id="p-3936">We say that \(G' = (V', E')\) is a <dfn class="terminology">subgraph</dfn> of \(G = (V, E)\text{,}\) and write \(G' \subseteq G\text{,}\) provided \(V' \subseteq V\) and \(E' \subseteq E\text{.}\)</p>
+<p id="p-3937">We say that \(G' = (V', E')\) is an <dfn class="terminology">induced subgraph</dfn>   of \(G = (V, E)\) provided \(V' \subseteq V\) and every edge in \(E\) whose vertices are still in \(V'\) is also an edge in \(E'\text{.}\)</p></article><p id="jag">Notice that every induced subgraph is also an ordinary subgraph, but not conversely. Think of a subgraph as the result of deleting some vertices and edges from the larger graph. For the subgraph to be an induced subgraph, we can still delete vertices, but now we only delete those edges that included the deleted vertices.</p>
+<article class="example-like" id="axs"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.1.4</span>
+</h6>
+<p id="GSW">Consider the graphs:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.5%;margin-right:3.5%;">
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-89.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-90.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-91.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:19.3548387096774%;justify-content:flex-end;"><img src="images/image-92.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="naf">Here both \(G_2\) and \(G_3\) are subgraphs of \(G_1\text{.}\) But only \(G_2\) is an <em class="emphasis">induced</em> subgraph. Every edge in \(G_1\) that connects vertices in \(G_2\) is also an edge in \(G_2\text{.}\) In \(G_3\text{,}\) the edge \(\{a,b\}\) is in \(E_1\) but not \(E_3\text{,}\) even though vertices \(a\) and \(b\) are in \(V_3\text{.}\)</p>
+<p id="Tho">The graph \(G_4\) is NOT a subgraph of \(G_1\text{,}\) even though it looks like all we did is remove vertex \(e\text{.}\) The reason is that in \(E_4\) we have the edge \(\{c,f\}\) but this is not an element of \(E_1\text{,}\) so we don't have the required 	\(E_4 \subseteq E_1\text{.}\)</p></article><p id="Php">Back to some basic graph theory definitions. Notice that all the graphs we have drawn above have the property that no pair of vertices is connected more than once, and no vertex is connected to itself. Graphs like these are sometimes called <dfn class="terminology">simple</dfn>, although we will just call them <em class="emphasis">graphs</em>. This is because our definition for a graph says that the edges form a set of 2-element subsets of the vertices. Remember that it doesn't make sense to say a set contains an element more than once. So no pair of vertices can be connected by an edge more than once. Also, since each edge must be a set containing two vertices, we cannot have a single vertex connected to itself by an edge.</p>
+<p id="voy">That said, there are times we want to consider double (or more) edges and single edge loops. For example, the “graph” we drew for the Bridges of Königsberg problem had double edges because there really are two bridges connecting a particular island to the near shore. We will call these objects <dfn class="terminology">multigraphs</dfn>.  This is a good name: a <em class="emphasis">multiset</em> is a set in which we are allowed to include a single element multiple times.</p>
+<p id="bvH">The graphs above are also <dfn class="terminology">connected</dfn>:  you can get from any vertex to any other vertex by following some path of edges. A graph that is not connected can be thought of as two separate graphs drawn close together. For example, the following graph is NOT connected because there is no path from \(a\) to \(b\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/ex-gt-non-connected.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="nJZ">Vertices in a graph do not always have edges between them. If we add all possible edges, then the resulting graph is called <dfn class="terminology">complete</dfn>.  That is, a graph is complete if every pair of vertices is connected by an edge. Since a graph is determined completely by which vertices are adjacent to which other vertices, there is only one complete graph with a given number of vertices. We give these a special name: \(K_n\)  is the complete graph on \(n\) vertices.</p>
+<p id="TRi">Each vertex in \(K_n\) is adjacent to \(n-1\) other vertices. We call the number of edges emanating from a given vertex the <dfn class="terminology">degree</dfn> of that vertex. So every vertex in \(K_n\) has degree \(n-1\text{.}\) How many edges does \(K_n\) have? One might think the answer should be \(n(n-1)\text{,}\) since we count \(n-1\) edges \(n\) times (once for each vertex). However, each edge is incident to 2 vertices, so we counted every edge exactly twice. Thus there are \(n(n-1)/2\) edges in \(K_n\text{.}\) Alternatively, we can say there are \({n \choose 2}\) edges, since to draw an edge we must choose 2 of the \(n\) vertices.</p>
+<p id="zYr">In general, if we know the degrees of all the vertices in a graph, we can find the number of edges. The sum of the degrees of all vertices will always be <em class="emphasis">twice</em> the number of edges, since each edge adds to the degree of two vertices. Notice this means that the sum of the degrees of all vertices in any graph must be even!</p>
+<p id="p-3948">This is our first example of a general result about all graphs.  It seems innocent enough, but we will use it to prove all sorts of other statements.  So let's give it a name and state it formally.</p>
+<article class="theorem-like" id="lem-handshake"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">4.1.5</span> <span class="title">Handshake Lemma</span>
+</h6>
+<p id="p-3949">In any graph, the sum of the degrees of vertices in the graph is always twice the number of edges.</p></article><p id="p-3950">The handshake lemma<a knowl="" class="id-ref" refid="hk-fn-15" id="fn-15"><sup> 2 </sup></a><span id="hk-fn-15" class="hidden-content tex2jax_ignore"><span class="footnote">A <em class="emphasis">lemma</em> is a mathematical statement that is primarily of importance in that it is used to establish other results.</span></span> is sometimes called the <em class="emphasis">degree sum formula</em>, and can be written symbolically as</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{v\in V} d(v) = e\text{.}
+\end{equation*}
+</div>
+<p>Here we are using the notation \(d(v)\) for the degree of the vertex \(v\text{.}\)</p>
+<p id="p-3951">One use for the lemma is to actually find the number of edges in a graph.  To do this, you must be given the <dfn class="terminology">degree sequence</dfn> for the graph (or be able to find it from other information).  This is a list of every degree of every vertex in the graph, generally written in non-increasing order.</p>
+<article class="example-like" id="example-116"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.1.6</span>
+</h6>
+<p id="p-3952">How many vertices and edges must a graph have if its degree sequence is</p>
+<div class="displaymath">
+\begin{equation*}
+(4, 4, 3, 3, 3, 2, 1)\text{?}
+\end{equation*}
+</div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-418" id="solution-418"><span class="type">Solution</span></a><div id="hk-solution-418" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-3953">The number of vertices is easy to find: it is the number of degrees in the sequence: 7.  To find the number of edges, we compute the degree sum:</p>
+<div class="displaymath">
+\begin{equation*}
+4 + 4 + 3 + 3 + 3 + 2 + 1 = 20
+\end{equation*}
+</div>
+<p>so the number of edges is half this: 10.</p>
+</div></div>
+</div></article><p id="p-3954">The handshake lemma also tells use what is not possible.</p>
+<article class="example-like" id="GEB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.1.7</span>
+</h6>
+<p id="zox">At a recent math seminar, 9 mathematicians greeted each other by shaking hands. Is it possible that each mathematician shook hands with exactly 7 people at the seminar?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-gWy" id="gWy"><span class="type">Solution</span></a><div id="hk-gWy" class="hidden-content tex2jax_ignore"><div class="solution"><p id="dGt">It seems like this should be possible. Each mathematician chooses one person to not shake hands with. But this cannot happen. We are asking whether a graph with 9 vertices can have each vertex have degree 7. If such a graph existed, the sum of the degrees of the vertices would be \(9\cdot 7 = 63\text{.}\) This would be twice the number of edges (handshakes) resulting in a graph with \(31.5\) edges. That is impossible. Thus at least one (in fact an odd number) of the mathematicians must have shaken hands with an <em class="emphasis">even</em> number of people at the seminar.</p></div></div>
+</div></article><p id="p-3957">We can generalize the previous example to get the following proposition.<a knowl="" class="id-ref" refid="hk-fn-16" id="fn-16"><sup> 3 </sup></a><span id="hk-fn-16" class="hidden-content tex2jax_ignore"><span class="footnote">A <dfn class="terminology">proposition</dfn> is a general statement in mathematics, similar to a theorem, although generally of lesser importance.</span></span></p>
+<article class="theorem-like" id="prop-evensum"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">4.1.8</span>
+</h6>
+<p id="p-3958">In any graph, the number of vertices with odd degree must be even.</p></article><article class="proof" id="proof-43"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-3959">Suppose there were a graph with an odd number of vertices with odd degree.  Then the sum of the degrees in the graph would be odd, which is impossible, by the handshake lemma.</p></article><p id="p-3960">We will consider further applications of the handshake lemma in the exercises.</p>
+<p id="gfA">One final definition: we say a graph is <dfn class="terminology">bipartite</dfn>  if the vertices can be divided into two sets, \(A\) and \(B\text{,}\) with no two vertices in \(A\) adjacent and no two vertices in \(B\) adjacent. The vertices in \(A\) can be adjacent to some or all of the vertices in \(B\text{.}\) If each vertex in \(A\) is adjacent to all the vertices in \(B\text{,}\) then the graph is a <dfn class="terminology">complete bipartite graph</dfn>, and gets a special name: \(K_{m,n}\text{,}\) where \(|A| = m\) and \(|B| = n\text{.}\) The graph in the houses and utilities puzzle is \(K_{3,3}\text{.}\)</p>
+<article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Named Graphs</span></h5>
+<p id="XRh">Some graphs are used more than others, and get special names.</p>
+<dl class="description-list-narrow">
+<dt id="RNA">\(K_n\)</dt>
+<dd><p id="Vsa">The complete graph on \(n\) vertices. </p></dd>
+<dt id="xUJ">\(K_{m,n}\)</dt>
+<dd><p id="Bzj">The complete bipartite graph with sets of \(m\) and \(n\) vertices. </p></dd>
+<dt id="ebS">\(C_n\)</dt>
+<dd><p id="hGs">The cycle on \(n\) vertices, just one big loop. </p></dd>
+<dt id="li-1996">\(P_n\)</dt>
+<dd><p id="p-3966">The path on \(n+1\) vertices (so \(n\) edges), just one long path. </p></dd>
+</dl>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.875%;margin-right:2.875%;">
+<div class="sbspanel" style="width:19.0981432360743%;justify-content:flex-end;"><img src="images/image-94.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.2201591511936%;justify-content:flex-end;"><img src="images/image-95.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:15.9151193633952%;justify-content:flex-end;"><img src="images/image-96.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:25.4641909814324%;justify-content:flex-end;"><img src="images/image-97.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="paragraphs" id="paragraphs-12"><h5 class="heading"><span class="title">Graph Theory Definitions</span></h5>
+<p id="p-3967">There are a lot of definitions to keep track of in graph theory. Here is a glossary of the terms we have already used and will soon encounter.</p>
+<dl class="description-list">
+<dt id="qqk">Graph</dt>
+<dd><p id="tUK"> A collection of <dfn class="terminology">vertices</dfn>, some of which are connected by <dfn class="terminology">edges</dfn>. More precisely, a pair of sets \(V\) and \(E\) where \(V\) is a set of vertices and \(E\) is a set of 2-element subsets of \(V\text{.}\)</p></dd>
+<dt id="Wxt">Adjacent</dt>
+<dd><p id="abT"> Two vertices are <dfn class="terminology">adjacent</dfn> if they are connected by an edge. Two edges are <dfn class="terminology">adjacent</dfn> if they share a vertex.</p></dd>
+<dt id="CEC">Bipartite graph</dt>
+<dd><p id="Gjc"> A graph for which it is possible to divide the vertices into two disjoint sets such that there are no edges between any two vertices in the same set.</p></dd>
+<dt id="iLL">Complete bipartite graph</dt>
+<dd><p id="mql">A bipartite graph for which every vertex in the first set is adjacent to every vertex in the second set.</p></dd>
+<dt id="OSU">Complete graph</dt>
+<dd><p id="Sxu"> A graph in which every pair of vertices is adjacent.</p></dd>
+<dt id="vad">Connected</dt>
+<dd><p id="yED"> A graph is <dfn class="terminology">connected</dfn> if there is a path from any vertex to any other vertex.</p></dd>
+<dt id="bhm">Chromatic number</dt>
+<dd><p id="eLM"> The minimum number of colors required in a proper vertex coloring of the graph.</p></dd>
+<dt id="Hov">Cycle</dt>
+<dd><p id="KSV"> A path (see below) that starts and stops at the same vertex, but contains no other repeated vertices.</p></dd>
+<dt id="nvE">Degree of a vertex</dt>
+<dd><p id="rae"> The number of edges incident to a vertex.</p></dd>
+<dt id="TCN">Euler path</dt>
+<dd><p id="Xhn"> A walk which uses each edge exactly once.</p></dd>
+<dt id="zJW">Euler circuit</dt>
+<dd><p id="Dow"> An Euler path which starts and stops at the same vertex.</p></dd>
+<dt id="fRf">Multigraph</dt>
+<dd><p id="jvF"> A <dfn class="terminology">multigraph</dfn> is just like a graph but can contain multiple edges between two vertices as well as single edge loops (that is an edge from a vertex to itself).</p></dd>
+<dt id="li-2009">Path</dt>
+<dd><p id="p-3980">A <dfn class="terminology">path</dfn> is a walk that doesn't repeat any vertices (or edges) except perhaps the first and last. If a path starts and ends at the same vertex, it is called a <dfn class="terminology">cycle</dfn>.</p></dd>
+<dt id="sfx">Planar</dt>
+<dd><p id="vJX"> A graph which can be drawn (in the plane) without any edges crossing.</p></dd>
+<dt id="YmG">Subgraph</dt>
+<dd><p id="bRg"> We say that \(H\) is a <dfn class="terminology">subgraph</dfn> of \(G\) if every vertex and edge of \(H\) is also a vertex or edge of \(G\text{.}\) We say \(H\) is an <dfn class="terminology">induced</dfn> subgraph of \(G\) if every vertex of \(H\) is a vertex of \(G\) and each pair of vertices in \(H\) are adjacent in \(H\) if and only if they are adjacent in \(G\text{.}\)</p></dd>
+<dt id="EtP">Tree</dt>
+<dd><p id="HYp"> A connected graph with no cycles. (If we remove the requirement that the graph is connected, the graph is called a <dfn class="terminology">forest</dfn>.) The vertices in a tree with degree 1 are called <dfn class="terminology">leaves</dfn>.</p></dd>
+<dt id="kAY">Vertex coloring</dt>
+<dd><p id="ofy"> An assignment of colors to each of the vertices of a graph. A vertex coloring is <dfn class="terminology">proper</dfn> if adjacent vertices are always colored differently.</p></dd>
+<dt id="li-2014">Walk</dt>
+<dd><p id="p-3985"> A sequence of vertices such that consecutive vertices (in the sequence) are adjacent (in the graph). A walk in which no edge is repeated is called a <dfn class="terminology">trail</dfn>, and a trail in which no vertex is repeated (except possibly the first and last) is called a <dfn class="terminology">path</dfn>.</p></dd>
+</dl></article><section class="exercises" id="yjr"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_gt-intro.html#yjr" class="permalink">¶</a><article class="exercise-like" id="xUW"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="uER">If 10 people each shake hands with each other, how many handshakes took place? What does this question have to do with graph theory?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-bhz" id="bhz"><span class="type">Solution</span></a><div id="hk-bhz" class="hidden-content tex2jax_ignore"><div class="solution"><p id="llf">This is asking for the number of edges in \(K_{10}\text{.}\) Each vertex (person) has degree (shook hands with) 9 (people). So the sum of the degrees is \(90\text{.}\) However, the degrees count each edge (handshake) twice, so there are 45 edges in the graph. That is how many handshakes took place.</p></div></div>
+</div></article><article class="exercise-like" id="ecf"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="aMa">Among a group of 5 people, is it possible for everyone to be friends with exactly 2 of the people in the group? What about 3 of the people in the group?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-HoI" id="HoI"><span class="type">Solution</span></a><div id="hk-HoI" class="hidden-content tex2jax_ignore"><div class="solution"><p id="Rso">It is possible for everyone to be friends with exactly 2 people. You could arrange the 5 people in a circle and say that everyone is friends with the two people on either side of them (so you get the graph \(C_5\)). However, it is not possible for everyone to be friends with 3 people. That would lead to a graph with an odd number of odd degree vertices which is impossible since the sum of the degrees must be even.</p></div></div>
+</div></article><article class="exercise-like" id="Kjo"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="GTj">Is it possible for two <em class="emphasis">different</em> (non-isomorphic) graphs to have the same number of vertices and the same number of edges? What if the degrees of the vertices in the two graphs are the same (so both graphs have vertices with degrees 1, 2, 2, 3, and 4, for example)? Draw two such graphs or explain why not.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div id="hk-hint-84" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-3991">Both situations are possible.  Go find some examples.</p></div></div>
+</div></article><article class="exercise-like" id="qqx"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="nas">Are the two graphs below equal? Are they isomorphic? If they are isomorphic, give the isomorphism. If not, explain.</p>
+<p id="ThB">Graph 1: \(V = \{a,b,c,d,e\}\text{,}\) \(E = \{\{a,b\}, \{a,c\}, \{a,e\}, \{b,d\}, \{b,e\}, \{c,d\}\}\text{.}\) </p>
+<p id="zoK">Graph 2:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-98.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-TDa" id="TDa"><span class="type">Solution</span></a><div id="hk-TDa" class="hidden-content tex2jax_ignore"><div class="solution"><p id="dGG">The graphs are not equal. For example, graph 1 has an edge \(\{a,b\}\) but graph 2 does not have that edge. They are isomorphic. One possible isomorphism is \(f:G_1 \to G_2\) defined by \(f(a) = d\text{,}\) \(f(b) = c\text{,}\) \(f(c) = e\text{,}\) \(f(d) = b\text{,}\) \(f(e) = a\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="WxG"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="fvT">Consider the following two graphs:</p>
+<dl class="description-list-narrow">
+<dt id="SxH">\(G_1\)</dt>
+<dd>
+<p id="eLZ">\(V_1=\{a,b,c,d,e,f,g\}\)</p>
+<p id="KTi">\(E_1=\{\{a,b\},\{a,d\},\{b,c\},\{b,d\},\{b,e\},\{b,f\},\{c,g\},\{d,e\}\text{,}\)</p>
+<p id="rar">\(\{e,f\},\{f,g\}\}\text{.}\)</p>
+</dd>
+<dt id="yEQ">\(G_2\)</dt>
+<dd>
+<p id="XhA">\(V_2=\{v_1,v_2,v_3,v_4,v_5,v_6,v_7\}\text{,}\)</p>
+<p id="DoJ">\(E_2=\{\{v_1,v_4\},\{v_1,v_5\},\{v_1,v_7\},\{v_2,v_3\},\{v_2,v_6\}\text{,}\)</p>
+<p id="jvS">\(\{v_3,v_5\},\{v_3,v_7\},\{v_4,v_5\},\{v_5,v_6\},\{v_5,v_7\}\}\)</p>
+</dd>
+</dl>
+<ol class="lower-alpha">
+<li id="cWM">
+<p id="PDb">Let \(f:G_1 \rightarrow G_2\) be a function that takes the vertices of Graph 1 to vertices of Graph 2. The function is given by the following table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l0 t0 lines">\(x\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(a\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(b\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(c\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(d\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(e\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(f\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(g\)</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0 lines">\(f(x)\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_4\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_5\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_6\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_3\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(v_7\)</td>
+</tr>
+</table></div></div></div>
+<p id="vKk">Does \(f\) define an isomorphism between Graph 1 and Graph 2?</p>
+</li>
+<li id="JdV"><p id="bRt">Define a new function \(g\) (with \(g \ne f\)) that defines an isomorphism between Graph 1 and Graph 2.</p></li>
+<li id="ple">
+<p id="HYC">Is the graph pictured below isomorphic to Graph 1 and Graph 2? Explain.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-99.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+</ol></article><article class="exercise-like" id="exercise-343"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-4007">What is the largest number of edges possible in a graph with 10 vertices?  What is the largest number of edges possible in a <em class="emphasis">bipartite</em> graph with 10 vertices?  What is the largest number of edges possible in a <em class="emphasis">tree</em> with 10 vertices?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div id="hk-hint-85" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4008">The bipartite graph is a little tricky.  You will definitely want a complete bipartite graph, but it could be \(K_{5,5}\) or maybe \(K_{1,9}\text{,}\) or …</p></div></div>
+</div></article><article class="exercise-like" id="CEP"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="LDc">Which of the graphs below are bipartite? Justify your answers.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:21.0526315789474%;justify-content:center;"><img src="images/image-100.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.0526315789474%;justify-content:center;"><img src="images/image-101.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.0526315789474%;justify-content:center;"><img src="images/image-102.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.0526315789474%;justify-content:center;"><img src="images/image-103.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-86" id="hint-86"><span class="type">Hint</span></a><div id="hk-hint-86" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-4010">The first graph is bipartite, which can be seen by labeling it as follows.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-bipartitelabel.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4011">Two of the remaining three are also bipartite.</p>
+</div></div>
+</div></article><article class="exercise-like" id="iLY"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="rKl">For which \(n \ge 3\) is the graph \(C_n\) bipartite?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div id="hk-hint-87" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4013">\(C_4\) is bipartite; \(C_5\) is not.  What about all the other values of \(n\text{?}\)</p></div></div>
+</div></article><article class="exercise-like" id="OTh"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="XRu">For each of the following, try to give two <em class="emphasis">different</em> unlabeled graphs with the given properties, or explain why doing so is impossible.</p>
+<ol class="lower-alpha">
+<li id="Vsn"><p id="ofL">Two different trees with the same number of vertices and the same number of edges. A tree is a connected graph with no cycles.</p></li>
+<li id="Bzw"><p id="UmU">Two different graphs with 8 vertices all of degree 2.</p></li>
+<li id="hGF"><p id="Aud">Two different graphs with 5 vertices all of degree 4.</p></li>
+<li id="NNO"><p id="gBm">Two different graphs with 5 vertices all of degree 3.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-LYB" id="LYB"><span class="type">Solution</span></a><div id="hk-LYB" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="Cjq" class="lower-alpha">
+<li id="tUX">
+<p id="MIv">For example:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-end;"><img src="images/image-105.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-end;"><img src="images/image-106.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</li>
+<li id="acg"><p id="sPE">This is not possible if we require the graphs to be connected. If not, we could take \(C_8\) as one graph and two copies of \(C_4\) as the other.</p></li>
+<li id="Gjp"><p id="YWN">Not possible. If you have a graph with 5 vertices all of degree 4, then every vertex must be adjacent to every other vertex. This is the graph \(K_5\text{.}\)</p></li>
+<li id="mqy"><p id="FdW">This is not possible. In fact, there is not even one graph with this property (such a graph would have \(5\cdot 3/2 = 7.5\) edges).</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-347"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-4024">Decide whether the statements below about subgraphs are true or false.  For those that are true, briefly explain why (1 or 2 sentences).  For any that are false, give a counterexample.</p>
+<ol class="lower-alpha">
+<li id="li-2028"><p id="p-4025">Any subgraph of a complete graph is also complete.</p></li>
+<li id="li-2029"><p id="p-4026">Any <em class="emphasis">induced</em> subgraph of a complete graph is also complete.</p></li>
+<li id="li-2030"><p id="p-4027">Any subgraph of a bipartite graph is bipartite.</p></li>
+<li id="li-2031"><p id="p-4028">Any subgraph of a tree is a tree.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-424" id="solution-424"><span class="type">Solution</span></a><div id="hk-solution-424" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-4029" class="lower-alpha cols4">
+<li id="li-2032"><p id="p-4030">False.</p></li>
+<li id="li-2033"><p id="p-4031">True.</p></li>
+<li id="li-2034"><p id="p-4032">True.</p></li>
+<li id="li-2035"><p id="p-4033">False.</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="vaq"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="DYD">Let \(k_1, k_2, \ldots,
+k_j\) be a list of numbers that sum to \(n\) (i.e, \(\sum_{i=1}^j k_i = n\)). Use two graphs containing \(n\) vertices to explain why</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i = 1}^j \binom{k_i}{2} \le \binom{n}{2}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-YmT" id="YmT"><span class="type">Hint</span></a><div id="hk-YmT" class="hidden-content tex2jax_ignore"><div class="solution"><p id="OxI">How many edges does \(K_n\) have?  One of the two graphs will not be connected (unless \(j=1\)).</p></div></div>
+</div></article><article class="exercise-like" id="exercise-349"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-4036">We often define graph theory concepts using set theory.  For example, given a graph \(G = (V, E)\) and a vertex \(v \in V\text{,}\) we define</p>
+<div class="displaymath">
+\begin{equation*}
+N(v) = \{u \in V \st \{v,u\} \in E\}\text{.}
+\end{equation*}
+</div>
+<p>We define \(N[v] = N(v) \cup \{v\}\text{.}\)  The goal of this problem is to figure out what all this means.</p>
+<ol class="lower-alpha">
+<li id="li-2036"><p id="p-4037">Let \(G\) be the graph with \(V = \{a,b,c,d,e,f\}\) and \(E = \{\{a,b\}, \{a,e\},\{b, c\}, \{b,e\}, \{c,d\}, \{c, f\}, \{d, f\}, \{e,f\}\}\text{.}\)  Find \(N(a)\text{,}\) \(N[a]\text{,}\) \(N(c)\text{,}\) and \(N[c]\text{.}\)</p></li>
+<li id="li-2037"><p id="p-4038">What is the largest and smallest possible values for \(|N(v)|\) and \(|N[v]|\) for the graph in part (a)?  Explain.</p></li>
+<li id="li-2038"><p id="p-4039">Give an example of a graph \(G = (V, E)\) (probably different than the one above) for which \(N[v] = V\) for some vertex \(v \in V\text{.}\)  Is there a graph for which \(N[v] = V\) for <em class="emphasis">all</em> \(v \in V\text{?}\)  Explain.</p></li>
+<li id="li-2039"><p id="p-4040">Give an example of a graph \(G = (V,E)\) for which \(N(v) = \emptyset\) for some \(v \in V\text{.}\)  Is there an example of such a graph for which \(N[u] = V\) for some other \(u \in V\) as well?  Explain.</p></li>
+<li id="li-2040"><p id="p-4041">Describe in words what \(N(v)\) and \(N[v]\) mean in general.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-89" id="hint-89"><span class="type">Hint</span></a><div id="hk-hint-89" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4042">You should be able to deduce everything directly from the definition.  However, perhaps it would be helpful to know that the \(N\) stands for <em class="emphasis">neighborhood</em>.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-350"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="p-4043">A graph is a way of representing the relationships between elements in a set: an edge between the vertices \(x\) and \(y\) tells us that \(x\) is related to \(y\) (which we can write as \(x \sim y\)).  Not all sorts of relationships can be represented by a graph though.  For each relationship described below, either draw the graph or explain why the relationship cannot be represented by a graph.</p>
+<ol class="lower-alpha">
+<li id="li-2041"><p id="p-4044">The set \(V = \{1,2, \ldots, 9\}\) and the relationship \(x \sim y\) when \(x-y\) is a non-zero multiple of 3.</p></li>
+<li id="li-2042"><p id="p-4045">The set \(V = \{1,2, \ldots, 9\}\) and the relationship \(x \sim y\) when \(y\) is a multiple of \(x\text{.}\)</p></li>
+<li id="li-2043"><p id="p-4046">The set \(V = \{1,2,\ldots, 9\}\) and the relationship \(x \sim y\) when \(0 \lt |x-y| \lt 3\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-90" id="hint-90"><span class="type">Hint</span></a><div id="hk-hint-90" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4047">Be careful to make sure the edges are not “directed.”  In a graph, if \(a\) is adjacent to \(b\text{,}\) then \(b\) is adjacent to \(a\text{.}\)  In the language of relations, we say that the edge relation is <dfn class="terminology">symmetric</dfn>.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-351"><h6 class="heading">
+<span class="codenumber">14</span> </h6>
+<p id="p-4048">Consider graphs with \(n\) vertices.  Remember, graphs do not need to be <em class="emphasis">connected</em>.</p>
+<ol class="lower-alpha">
+<li id="li-2044"><p id="p-4049">How many edges must the graph have to guarantee at least one vertex has degree two or more?  Prove your answer.</p></li>
+<li id="li-2045"><p id="p-4050">How many edges must the graph have to guarantee all vertices have degree two or more?  Prove your answer.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-91" id="hint-91"><span class="type">Hint</span></a><div id="hk-hint-91" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4051">You might want to answer the questions for some specific values of \(n\) to get a feel for them, but your final answers should be in terms of \(n\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="exercise-352"><h6 class="heading">
+<span class="codenumber">15</span> </h6>
+<p id="p-4052">Prove that any graph must have two vertices of the same degree.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div id="hk-hint-92" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4053">Try a small example first: any graph with 8 vertices must have two vertices of the same degree.  If not, what would the degree sequence be?</p></div></div>
+</div></article><article class="exercise-like" id="exr-degree1handshake"><h6 class="heading">
+<span class="codenumber">16</span> </h6>
+<p id="p-4054">Suppose \(G\) is a connected graph with \(n &gt; 1\) vertices and \(n-1\) edges.  Prove that \(G\) has a vertex of degree 1.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-93" id="hint-93"><span class="type">Hint</span></a><div id="hk-hint-93" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-4055">Use the <a knowl="./knowl/lem-handshake.html" title="Lemma 4.1.5: Handshake Lemma">handshake lemma 4.1.5</a>.  What would happen if all the vertices had degree 2?</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

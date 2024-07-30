@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-01-01T10:47:32-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Stars and Bars</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:uw-slr5ay1u';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-5.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics</span><span class="subtitle">An Open Introduction, 3rd edition</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_comb-proofs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_advPIE.html" title="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_comb-proofs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_advPIE.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="qaP"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="WhY">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="Cph">How to use this book</a></li>
+</ul>
+<h2 class="link"><a href="ch_intro.html" data-scroll="csJ"><span class="codenumber">0</span> <span class="title">Introduction and Preliminaries</span></a></h2>
+<ul>
+<li><a href="sec_intro-intro.html" data-scroll="NGK">What is Discrete Mathematics?</a></li>
+<li><a href="sec_intro-statements.html" data-scroll="xzK">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="leb">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="BUV">Functions</a></li>
+</ul>
+<h2 class="link"><a href="ch_counting.html" data-scroll="Pux"><span class="codenumber">1</span> <span class="title">Counting</span></a></h2>
+<ul>
+<li><a href="sec_counting-addmult.html" data-scroll="VUd">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="Zkv">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="Hvm">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="ItB">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="fJO" class="active">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="kVX">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="qLw">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_sequences.html" data-scroll="iRP"><span class="codenumber">2</span> <span class="title">Sequences</span></a></h2>
+<ul>
+<li><a href="sec_seq_intro.html" data-scroll="mrl">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="QQl">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="Skm">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="vbq">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="jpB">Induction</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="rZt">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_logic.html" data-scroll="UOk"><span class="codenumber">3</span> <span class="title">Symbolic Logic and Proofs</span></a></h2>
+<ul>
+<li><a href="sec_propositional.html" data-scroll="suF">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="Ves">Proofs</a></li>
+<li><a href="sec_logic-conc.html" data-scroll="uMv">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_graphtheory.html" data-scroll="EVs"><span class="codenumber">4</span> <span class="title">Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_gt-intro.html" data-scroll="RdG">Definitions</a></li>
+<li><a href="sec_trees.html" data-scroll="sec_trees">Trees</a></li>
+<li><a href="sec_planar.html" data-scroll="ctW">Planar Graphs</a></li>
+<li><a href="sec_coloring.html" data-scroll="fYj">Coloring</a></li>
+<li><a href="sec_paths.html" data-scroll="cPv">Euler Paths and Circuits</a></li>
+<li><a href="sec_matchings.html" data-scroll="MWD">Matching in Bipartite Graphs</a></li>
+<li><a href="sec_gt-conc.html" data-scroll="Dab">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_additionalTopics.html" data-scroll="jno"><span class="codenumber">5</span> <span class="title">Additional Topics</span></a></h2>
+<ul>
+<li><a href="sec_addtops-genfun.html" data-scroll="ShZ">Generating Functions</a></li>
+<li><a href="sec_addtops-numbth.html" data-scroll="JFy">Introduction to Number Theory</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="qRN"><span class="title">Backmatter</span></a></h2>
+<h2 class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></h2>
+<h2 class="link"><a href="solutions-2.html" data-scroll="WYW"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></h2>
+<h2 class="link"><a href="appendix-1.html" data-scroll="KKE"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></h2>
+<h2 class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></h2>
+<h2 class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="fJO"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Stars and Bars</span>
+</h2>
+<a href="sec_stars-and-bars.html" class="permalink">¶</a><section class="introduction" id="ktH"><article class="project-like" id="QAQ"><h6 class="heading">
+<span class="type">Investigate!</span> <span class="codenumber">1.6</span>
+</h6>
+<p id="fop">Suppose you have some number of identical Rubik's cubes to distribute to your friends. Imagine you start with a single row of the cubes.</p>
+<ol class="decimal">
+<li id="NGk">
+<p id="vCG">Find the number of different ways you can distribute the cubes provided:</p>
+<ol id="bJP" class="lower-alpha">
+<li id="TJR"><p id="nCI">You have 3 cubes to give to 2 people.</p></li>
+<li id="tNt"><p id="HQY">You have 4 cubes to give to 2 people.</p></li>
+<li id="ZUC"><p id="nYh">You have 5 cubes to give to 2 people.</p></li>
+<li id="GbL"><p id="Ufq">You have 3 cubes to give to 3 people.</p></li>
+<li id="miU"><p id="Amz">You have 4 cubes to give to 3 people.</p></li>
+<li id="Sqd"><p id="gtI">You have 5 cubes to give to 3 people.</p></li>
+</ol>
+</li>
+<li id="joo"><p id="MAR">Make a conjecture about how many different ways you could distribute 7 cubes to 4 people. Explain.</p></li>
+<li id="Pvx"><p id="sIa">What if each person were required to get <em class="emphasis">at least one</em> cube? How would your answers change?</p></li>
+</ol></article><p id="Lvy">Consider the following counting problem:</p>
+<blockquote class="blockquote" id="pdA"><p id="uxn">You have 7 cookies to give to 4 kids. How many ways can you do this?</p></blockquote>
+<p id="rCH">Take a moment to think about how you might solve this problem. You may assume that it is acceptable to give a kid no cookies. Also, the cookies are all identical and the order in which you give out the cookies does not matter.</p>
+<p id="XJQ">Before solving the problem, here is a wrong answer: You might guess that the answer should be \(4^7\) because for each of the 7 cookies, there are 4 choices of kids to which you can give the cookie. This is reasonable, but wrong. To see why, consider a few possible outcomes: we could assign the first six cookies to kid A, and the seventh cookie to kid B. Another outcome would assign the first cookie to kid B and the six remaining cookies to kid A. Both outcomes are included in the \(4^7\) answer. But for our counting problem, both outcomes are really the same – kid A gets six cookies and kid B gets one cookie.</p>
+<p id="DQZ">What do outcomes actually look like? How can we represent them? One approach would be to write an outcome as a string of four numbers like this:</p>
+<div class="displaymath">
+\begin{equation*}
+3112\text{,}
+\end{equation*}
+</div>
+<p>which represent the outcome in which the first kid gets 3 cookies, the second and third kid each get 1 cookie, and the fourth kid gets 2 cookies. Represented this way, the order in which the numbers occur matters. 1312 is a different outcome, because the first kid gets a one cookie instead of 3. Each number in the string can be any integer between 0 and 7. But the answer is not \(7^4\text{.}\) We need the <em class="emphasis">sum</em> of the numbers to be 7.</p>
+<p id="jYi">Another way we might represent outcomes is to write a string of seven letters:</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{ABAADCD} \text{,}
+\end{equation*}
+</div>
+<p>which represents that the first cookie goes to kid A, the second cookie goes to kid B, the third and fourth cookies go to kid A, and so on. In fact, this outcome is identical to the previous one—A gets 3 cookies, B and C get 1 each and D gets 2. Each of the seven letters in the string can be any of the 4 possible letters (one for each kid), but the number of such strings is not \(4^7\text{,}\) because here order does <em class="emphasis">not</em> matter. In fact, another way to write the same outcome is</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{AAABCDD} \text{.}
+\end{equation*}
+</div>
+<p id="Qfr">This will be the preferred representation of the outcome. Since we can write the letters in any order, we might as well write them in <em class="emphasis">alphabetical</em> order for the purposes of counting. So we will write all the A's first, then all the B's, and so on.</p>
+<p id="wmA">Now think about how you could specify such an outcome. All we really need to do is say when to switch from one letter to the next. In terms of cookies, we need to say after how many cookies do we stop giving cookies to the first kid and start giving cookies to the second kid. And then after how many do we switch to the third kid? And after how many do we switch to the fourth? So yet another way to represent an outcome is like this:</p>
+<div class="displaymath">
+\begin{equation*}
+***|*|*|**
+\end{equation*}
+</div>
+<p id="ctJ">Three cookies go to the first kid, then we switch and give one cookie to the second kid, then switch, one to the third kid, switch, two to the fourth kid. Notice that we need 7 stars and 3 bars – one star for each cookie, and one bar for each switch between kids, so one fewer bars than there are kids (we don't need to switch after the last kid – we are done).</p>
+<p id="IAS">Why have we done all of this? Simple: to count the number of ways to distribute 7 cookies to 4 kids, all we need to do is count how many <em class="emphasis">stars and bars</em> charts there are. But a <dfn class="terminology">stars and bars chart</dfn> is just a string of symbols, some stars and some bars. If instead of stars and bars we would use 0's and 1's, it would just be a bit string. We know how to count those.</p>
+<p id="oIb">Before we get too excited, we should make sure that really <em class="emphasis">any</em> string of (in our case) 7 stars and 3 bars corresponds to a different way to distribute cookies to kids. In particular consider a string like this:</p>
+<div class="displaymath">
+\begin{equation*}
+|***||****
+\end{equation*}
+</div>
+<p id="UPk">Does that correspond to a cookie distribution? Yes. It represents the distribution in which kid A gets 0 cookies (because we switch to kid B before any stars), kid B gets three cookies (three stars before the next bar), kid C gets 0 cookies (no stars before the next bar) and kid D gets the remaining 4 cookies. No matter how the stars and bars are arranged, we can distribute cookies in that way. Also, given any way to distribute cookies, we can represent that with a stars and bars chart. For example, the distribution in which kid A gets 6 cookies and kid B gets 1 cookie has the following chart:</p>
+<div class="displaymath">
+\begin{equation*}
+******|*||
+\end{equation*}
+</div>
+<p id="AWt">After all that work we are finally ready to count. Each way to distribute cookies corresponds to a stars and bars chart with 7 stars and 3 bars. So there are 10 symbols, and we must choose 3 of them to be bars. Thus:</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{ There are } {10 \choose 3}\mbox{ ways to distribute 7 cookies to 4 kids.}
+\end{equation*}
+</div>
+<p id="hdC">While we are at it, we can also answer a related question: how many ways are there to distribute 7 cookies to 4 kids so that each kid gets at least one cookie? What can you say about the corresponding stars and bars charts? The charts must start and end with at least one star (so that kids A and D) get cookies, and also no two bars can be adjacent (so that kids B and C are not skipped). One way to assure this is to only place bars in the spaces <em class="emphasis">between</em> the stars. With 7 stars, there are 6 spots between the stars, so we must choose 3 of those 6 spots to fill with bars. Thus there are \({6 \choose 3}\) ways to distribute 7 cookies to 4 kids giving at least one cookie to each kid.</p>
+<p id="NkL">Another (and more general) way to approach this modified problem is to first give each kid one cookie. Now the remaining 3 cookies can be distributed to the 4 kids without restrictions. So we have 3 stars and 3 bars for a total of 6 symbols, 3 of which must be bars. So again we see that there are \({6 \choose 3}\) ways to distribute the cookies.</p>
+<p id="trU">Stars and bars can be used in counting problems other than kids and cookies. Here are a few examples:</p>
+<article class="example-like" id="rYg"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.1</span>
+</h6>
+<p id="aEw">Your favorite mathematical ice-cream parlor offers 10 flavors. How many milkshakes could you create using exactly 6, not necessarily distinct scoops? The order you add the flavors does not matter (they will be blended up anyway) but you are allowed repeats. So one possible shake is triple chocolate, double cherry, and mint chocolate chip.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-wHZ" id="wHZ"><span class="type">Solution</span></a><div id="hk-wHZ" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="JGl">We get six scoops, each of which could be one of ten possible flavors. Represent each scoop as a star. Think of going down the counter one flavor at a time: you see vanilla first, and skip to the next, chocolate. You say yes to chocolate three times (use three stars), then switch to the next flavor. You keep skipping until you get to cherry, which you say yes to twice. Another switch and you are at mint chocolate chip. You say yes once. Then you keep switching until you get past the last flavor, never saying yes again (since you already have said yes six times). There are ten flavors to choose from, so we must switch from considering one flavor to the next nine times. These are the nine bars.</p>
+<p id="pNu">Now that we are confident that we have the right number of stars and bars, we answer the question simply: there are 6 stars and 9 bars, so 15 symbols. We need to pick 9 of them to be bars, so the number of milkshakes possible is</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{15}{9}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="example-like" id="Yfp"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.2</span>
+</h6>
+<p id="GLF">How many 7 digit phone numbers are there in which the digits are non-increasing? That is, every digit is less than or equal to the previous one.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-cPi" id="cPi"><span class="type">Solution</span></a><div id="hk-cPi" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="VUD">We need to decide on 7 digits so we will use 7 stars. The bars will represent a switch from each possible single digit number down the next smaller one. So the phone number 866-5221 is represented by the stars and bars chart</p>
+<div class="displaymath">
+\begin{equation*}
+|*||**|*|||**|*|
+\end{equation*}
+</div>
+<p id="CbM">There are 10 choices for each digit (0-9) so we must switch between choices 9 times. We have 7 stars and 9 bars, so the total number of phone numbers is</p>
+<div class="displaymath">
+\begin{equation*}
+{16 \choose 9}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="example-like" id="Emy"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.3</span>
+</h6>
+<p id="mSO">How many integer solutions are there to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 + x_2 + x_3 + x_4 + x_5 = 13\text{.}
+\end{equation*}
+</div>
+<p id="SZX">(An <dfn class="terminology">integer solution</dfn> to an equation is a solution in which the unknown must have an integer value.)</p>
+<ol id="zhg" class="decimal">
+<li id="yxm"><p id="YPj">where \(x_i \ge 0\) for each \(x_i\text{?}\)</p></li>
+<li id="eEv"><p id="EWs">where \(x_i &gt; 0\) for each \(x_i\text{?}\)</p></li>
+<li id="KLE"><p id="ldB">where \(x_i \ge 2\) for each \(x_i\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-IWr" id="IWr"><span class="type">Solution</span></a><div id="hk-IWr" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="iiV">This problem is just like giving 13 cookies to 5 kids. We need to say how many of the 13 units go to each of the 5 variables. In other words, we have 13 stars and 4 bars (the bars are like the “+” signs in the equation).</p>
+<ol id="Oqe" class="decimal">
+<li id="qSN"><p id="RkK">If \(x_i\) can be 0 or greater, we are in the standard case with no restrictions. So 13 stars and 4 bars can be arranged in \({17 \choose 4}\) ways.</p></li>
+<li id="WZW"><p id="xrT">Now each variable must be at least 1. So give one unit to each variable to satisfy that restriction. Now there are 8 stars left, and still 4 bars, so the number of solutions is \({12 \choose 4}\text{.}\)</p></li>
+<li id="Dhf"><p id="dzc">Now each variable must be 2 or greater. So before any counting, give each variable 2 units. We now have 3 remaining stars and 4 bars, so there are \({7 \choose 4}\) solutions.</p></li>
+</ol>
+</div></div>
+</div></article><article class="paragraphs" id="LQX"><h5 class="heading"><span class="title">Counting with Functions</span></h5>
+<p id="Zzd">Many of the counting problems in this section might at first appear to be examples of counting <em class="emphasis">functions</em>. After all, when we try to count the number of ways to distribute cookies to kids, we are assigning each cookie to a kid, just like you assign elements of the domain of a function to elements in the codomain. However, the number of ways to assign 7 cookies to 4 kids is \({10 \choose 7} = 120\text{,}\) while the number of functions \(f: \{1,2,3,4,5,6,7\} \to \{a,b,c,d\}\) is \(4^7 = 16384\text{.}\) What is going on here?</p>
+<p id="FGm">When we count functions, we consider the following two functions, for example, to be different:</p>
+<div class="displaymath">
+\begin{equation*}
+f = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{a \amp b \amp c \amp c \amp c \amp c \amp c} \qquad g = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{b \amp a \amp c \amp c \amp c \amp c \amp c}\text{.}
+\end{equation*}
+</div>
+<p>But these two functions would correspond to the <em class="emphasis">same</em> cookie distribution: kids \(a\) and \(b\) each get one cookie, kid \(c\) gets the rest (and none for kid \(d\)).</p>
+<p id="lNv">The point: elements of the domain are distinguished, cookies are indistinguishable. This is analogous to the distinction between permutations (like counting functions) and combinations (not).</p></article></section><section class="exercises" id="Wxt"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_stars-and-bars.html#Wxt" class="permalink">¶</a><article class="exercise-like" id="IAS"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=65&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFuczEgPSBDb21wdXRlKCJDKDEwLDUpIik7CiRhbnMyID0gQ29tcHV0ZSgiQygxNCw1KSIpOwoKQkVHSU5fUEdNTApBIG11bHRpc2V0IGlzIGEgY29sbGVjdGlvbiBvZiBvYmplY3RzLCBqdXN0IGxpa2UgYSBzZXQsIGJ1dCBjYW4gY29udGFpbiBhbiBvYmplY3QgbW9yZSB0aGFuIG9uY2UgKHRoZSBvcmRlciBvZiB0aGUgZWxlbWVudHMgc3RpbGwgZG9lc24ndCBtYXR0ZXIpLiBGb3IgZXhhbXBsZSwgW2BcezEsMSwgMiwgNSwgNSwgN1x9YF0gaXMgYSBtdWx0aXNldCBvZiBzaXplIDYuCmEuICBIb3cgbWFueSBfc2V0c18gb2Ygc2l6ZSA1IGNhbiBiZSBtYWRlIHVzaW5nIHRoZSAxMCBudW1lcmljIGRpZ2l0cyAwIHRocm91Z2ggOT8KCiAgICBbX19fX19deyRhbnMxfQoKCmEuICBIb3cgbWFueSBfbXVsdGlfc2V0cyBvZiBzaXplIDUgY2FuIGJlIG1hZGUgdXNpbmcgdGhlIDEwIG51bWVyaWMgZGlnaXRzIDAgdGhyb3VnaCA5PwoKICAgIFtfX19fX117JGFuczJ9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYHsxMFxjaG9vc2UgNX1gXSBzZXRzLiBXZSBtdXN0IHNlbGVjdCA1IG9mIHRoZSAxMCBkaWdpdHMgdG8gcHV0IGluIHRoZSBzZXQuCgoKYS4gIFVzZSBzdGFycyBhbmQgYmFyczogZWFjaCBzdGFyIHJlcHJlc2VudHMgb25lIG9mIHRoZSA1IGVsZW1lbnRzIG9mIHRoZSBzZXQsIGVhY2ggYmFyIHJlcHJlc2VudHMgYSBzd2l0Y2ggYmV0d2VlbiBkaWdpdHMuIFNvIHRoZXJlIGFyZSA1IHN0YXJzIGFuZCA5IGJhcnMsIGdpdmluZyB1cyBbYHsxNCBcY2hvb3NlIDl9YF0gc2V0cy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="hdC"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=66&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFuczEgPSBDb21wdXRlKCJDKDcsNSkiKTsKJGFuczIgPSBDb21wdXRlKCJDKDExLDYpIik7CgpCRUdJTl9QR01MClVzaW5nIHRoZSBkaWdpdHMgMiB0aHJvdWdoIDgsIGZpbmQgdGhlIG51bWJlciBvZiBkaWZmZXJlbnQgNS1kaWdpdCBudW1iZXJzIHN1Y2ggdGhhdDoKYS4gIERpZ2l0cyBjYW5ub3QgYmUgcmVwZWF0ZWQgYW5kIG11c3QgYmUgd3JpdHRlbiBpbiBpbmNyZWFzaW5nIG9yZGVyLiBGb3IgZXhhbXBsZSwgMjM2NzggaXMgb2theSwgYnV0IDMyNjc4IGlzIG5vdC4KCiAgICBbX19fX19deyRhbnMxfQoKCmEuICBEaWdpdHMgX2Nhbl8gYmUgcmVwZWF0ZWQgYW5kIG11c3QgYmUgd3JpdHRlbiBpbiBfbm9uLWRlY3JlYXNpbmdfIG9yZGVyLiBGb3IgZXhhbXBsZSwgMjQ0NDggaXMgb2theSwgYnV0IDI0NDg0IGlzIG5vdC4KCiAgICBbX19fX19deyRhbnMyfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVGhlcmUgYXJlIFtgezcgXGNob29zZSA1fWBdIG51bWJlcnMuIFdlIHNpbXBseSBjaG9vc2UgZml2ZSBvZiB0aGUgc2V2ZW4gZGlnaXRzIGFuZCBvbmNlIGNob3NlbiBwdXQgdGhlbSBpbiBpbmNyZWFzaW5nIG9yZGVyLgoKCmEuICBUaGlzIHJlcXVpcmVzIHN0YXJzIGFuZCBiYXJzLiBVc2UgYSBzdGFyIHRvIHJlcHJlc2VudCBlYWNoIG9mIHRoZSA1IGRpZ2l0cyBpbiB0aGUgbnVtYmVyLCBhbmQgdXNlIHRoZWlyIHBvc2l0aW9uIHJlbGF0aXZlIHRvIHRoZSBiYXJzIHRvIHNheSB3aGF0IG51bWVyYWwgZmlsbHMgdGhhdCBzcG90LiBTbyB3ZSB3aWxsIGhhdmUgNSBzdGFycyBhbmQgNiBiYXJzLCBnaXZpbmcgW2B7MTEgXGNob29zZSA2fWBdIG51bWJlcnMuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="oIb"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="cmF">Each of the counting problems below can be solved with stars and bars. For each, say what outcome the diagram</p>
+<div class="displaymath">
+\begin{equation*}
+***|*||**|
+\end{equation*}
+</div>
+<p>represents, if there are the correct number of stars and bars for the problem. Otherwise, say why the diagram does not represent any outcome, and what a correct diagram would look like.</p>
+<ol class="lower-alpha">
+<li id="ubO"><p id="XYl">How many ways are there to select a handful of 6 jellybeans from a jar that contains 5 different flavors?</p></li>
+<li id="aiX"><p id="Efu">How many ways can you distribute 5 identical lollipops to 6 kids?</p></li>
+<li id="Gqg"><p id="kmD">How many 6-letter words can you make using the 5 vowels?</p></li>
+<li id="mxp"><p id="QtM">How many solutions are there to the equation \(x_1 + x_2 + x_3 + x_4 = 6\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-eiW" id="eiW"><span class="type">Solution</span></a><div id="hk-eiW" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="SST" class="lower-alpha">
+<li id="SEy"><p id="wAV">You take 3 strawberry, 1 lime, 0 licorice, 2 blueberry and 0 bubblegum.</p></li>
+<li id="yLH">
+<p id="cIe">This is backwards. We don't want the stars to represent the kids because the kids are not identical, but the stars are. Instead we should use 5 stars (for the lollipops) and use 5 bars to switch between the 6 kids. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+**||***|||
+\end{equation*}
+</div>
+<p>would represent the outcome with the first kid getting 2 lollipops, the third kid getting 3, and the rest of the kids getting none.</p>
+</li>
+<li id="eSQ"><p id="IPn">This is the word AAAEOO.</p></li>
+<li id="KZZ">
+<p id="oWw">This doesn't represent a solution. Each star should represent one of the 6 units that add up to 6, and the bars should <em class="emphasis">switch</em> between the different variables. We have one too many bars. An example of a correct diagram would be</p>
+<div class="displaymath">
+\begin{equation*}
+*|**||***\text{,}
+\end{equation*}
+</div>
+<p>representing that \(x_1 = 1\text{,}\) \(x_2 = 2\text{,}\) \(x_3 = 0\text{,}\) and \(x_4 = 3\text{.}\)</p>
+</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="UPk"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=67&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFuczEgPSBDb21wdXRlKCJDKDE4LDE0KSIpOwokYW5zMiA9IENvbXB1dGUoIkMoMTMsOSkiKTsKCkJFR0lOX1BHTUwKQWZ0ZXIgZ3ltIGNsYXNzIHlvdSBhcmUgdGFza2VkIHdpdGggcHV0dGluZyB0aGUgMTQgaWRlbnRpY2FsIGRvZGdlYmFsbHMgYXdheSBpbnRvIDUgYmlucy4KYS4gIEhvdyBtYW55IHdheXMgY2FuIHlvdSBkbyB0aGlzIGlmIHRoZXJlIGFyZSBubyByZXN0cmljdGlvbnM%2FCgogICAgW19fX19fXXskYW5zMX0KCgphLiAgSG93IG1hbnkgd2F5cyBjYW4geW91IGRvIHRoaXMgaWYgZWFjaCBiaW4gbXVzdCBjb250YWluIGF0IGxlYXN0IG9uZSBkb2RnZWJhbGw%2FCgogICAgW19fX19fXXthbnMyfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2B7MTggXGNob29zZSA0fWBdIHdheXMuIEVhY2ggb3V0Y29tZSBjYW4gYmUgcmVwcmVzZW50ZWQgYnkgYSBzZXF1ZW5jZSBvZiAxNCBzdGFycyBhbmQgNCBiYXJzLgphLiAgW2B7MTMgXGNob29zZSA0fWBdIHdheXMuIEZpcnN0IHB1dCBvbmUgYmFsbCBpbiBlYWNoIGJpbi4gVGhpcyBsZWF2ZXMgOSBzdGFycyBhbmQgNCBiYXJzLiAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="AWt"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=68&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFuczEgPSBDb21wdXRlKCJDKDcsMikiKTsKJGFuczIgPSBDb21wdXRlKCJDKDEwLDIpIik7CiRhbnMzID0gQ29tcHV0ZSgiQygxOSwyKSIpOwoKQkVHSU5fUEdNTApIb3cgbWFueSBpbnRlZ2VyIHNvbHV0aW9ucyBhcmUgdGhlcmUgdG8gdGhlIGVxdWF0aW9uIFtgeCArIHkgKyB6ID0gOGBdIGZvciB3aGljaAphLiAgW2B4XHRleHR7LH1gXSBbYHlcdGV4dHssfWBdIGFuZCBbYHpgXSBhcmUgYWxsIHBvc2l0aXZlPwoKICAgIFtfX19fX117JGFuczF9CgoKYS4gIFtgeFx0ZXh0eyx9YF0gW2B5XHRleHR7LH1gXSBhbmQgW2B6YF0gYXJlIGFsbCBub24tbmVnYXRpdmU%2FCgogICAgW19fX19fXXskYW5zMn0KCgphLiAgW2B4XHRleHR7LH1gXSBbYHlcdGV4dHssfWBdIGFuZCBbYHpgXSBhcmUgYWxsIGdyZWF0ZXIgdGhhbiBvciBlcXVhbCB0byBbYC0zXHRleHR7Ln1gXQoKICAgIFtfX19fX117JGFuczN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYHs3IFxjaG9vc2UgMn1gXSBzb2x1dGlvbnMuIEFmdGVyIGVhY2ggdmFyaWFibGUgZ2V0cyAxIHN0YXIgZm9yIGZyZWUsIHdlIGFyZSBsZWZ0IHdpdGggNSBzdGFycyBhbmQgMiBiYXJzLgoKCmEuICBbYHsxMCBcY2hvb3NlIDJ9YF0gc29sdXRpb25zLiBXZSBoYXZlIDggc3RhcnMgYW5kIDIgYmFycy4KCgphLiAgW2B7MTkgXGNob29zZSAyfWBdIHNvbHV0aW9ucy4gVGhpcyBwcm9ibGVtIGlzIGVxdWl2YWxlbnQgdG8gZmluZGluZyB0aGUgbnVtYmVyIG9mIHNvbHV0aW9ucyB0byBbYHgnICsgeScgKyB6JyA9IDE3YF0gd2hlcmUgW2B4J1x0ZXh0eyx9YF0gW2B5J2BdIGFuZCBbYHonYF0gYXJlIG5vbi1uZWdhdGl2ZS4gKEluIGZhY3QsIHdlIHJlYWxseSBqdXN0IGRvIGEgc3Vic3RpdHV0aW9uLiBMZXQgW2B4ID0geCctIDNcdGV4dHssfWBdIFtgeSA9IHknIC0gM2BdIGFuZCBbYHogPSB6JyAtIDNgXSkuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="NkL"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=69&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFucyA9IENvbXB1dGUoIkMoMTAsNSkiKTsKCkJFR0lOX1BHTUwKV2hlbiBwbGF5aW5nIFlhaHR6ZWUsIHlvdSByb2xsIGZpdmUgcmVndWxhciA2LXNpZGVkIGRpY2UuIEhvdyBtYW55IGRpZmZlcmVudCBvdXRjb21lcyBhcmUgcG9zc2libGUgZnJvbSBhIHNpbmdsZSByb2xsPyBUaGUgb3JkZXIgb2YgdGhlIGRpY2UgZG9lcyBub3QgbWF0dGVyLgoKW19fX19fXXskYW5zfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgezEwIFxjaG9vc2UgNX1gXSBvdXRjb21lcy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="trU"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=70&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFucyA9IENvbXB1dGUoIjEvQygxMCw3KSIpOwoKQkVHSU5fUEdNTApZb3VyIGZyaWVuZCB0ZWxscyB5b3Ugc2hlIGhhcyA3IGNvaW5zIGluIGhlciBoYW5kIChqdXN0IHBlbm5pZXMsIG5pY2tlbHMsIGRpbWVzIGFuZCBxdWFydGVycykuIElmIHlvdSBndWVzcyBob3cgbWFueSBvZiBlYWNoIGtpbmQgb2YgY29pbiBzaGUgaGFzLCBzaGUgd2lsbCBnaXZlIHRoZW0gdG8geW91LiBJZiB5b3UgZ3Vlc3MgcmFuZG9tbHksIHdoYXQgaXMgdGhlIHByb2JhYmlsaXR5IHRoYXQgeW91IHdpbGwgYmUgY29ycmVjdD8KCltfX19fX117JGFuc30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGVyZSBhcmUgW2B7MTAgXGNob29zZSAzfSA9IDEyMGBdIGRpZmZlcmVudCBjb21iaW5hdGlvbnMgb2YgY29pbnMgcG9zc2libGUuIFRodXMgeW91IGhhdmUgYSAxIGluIDEyMCBjaGFuY2Ugb2YgZ3Vlc3NpbmcgY29ycmVjdGx5LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="Zzd"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=71&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFucyA9IENvbXB1dGUoIkMoMTgsMTUpIik7CgpCRUdJTl9QR01MCkhvdyBtYW55IGludGVnZXIgc29sdXRpb25zIHRvIFtgeF8xICsgeF8yICsgeF8zICsgeF80ID0gMjVgXSBhcmUgdGhlcmUgZm9yIHdoaWNoIFtgeF8xIFxnZSAxXHRleHR7LH1gXSBbYHhfMiBcZ2UgMlx0ZXh0eyx9YF0gW2B4XzMgXGdlIDNgXSBhbmQgW2B4XzQgXGdlIDRcdGV4dHs%2FfWBdCgpbX19fX19deyRhbnN9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B7MTggXGNob29zZSAxNX1gXSBzb2x1dGlvbnMuIERpc3RyaWJ1dGUgMTAgdW5pdHMgdG8gdGhlIHZhcmlhYmxlcyBiZWZvcmUgZmluZGluZyBhbGwgc29sdXRpb25zIHRvIFtgeF8xJyArIHhfMicgKyB4XzMnICsgeF80JyA9IDE1YF0gaW4gbm9uLW5lZ2F0aXZlIGludGVnZXJzLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="FGm"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="lGr">Solve the three counting problems below. Then say why it makes sense that they all have the same answer. That is, say how you can interpret them as each other.</p>
+<ol class="lower-alpha">
+<li id="ZdE"><p id="nRd">How many ways are there to distribute 8 cookies to 3 kids?</p></li>
+<li id="FkN"><p id="TYm">How many solutions in non-negative integers are there to \(x+y+z = 8\text{?}\)</p></li>
+<li id="lrW"><p id="Afv">How many different packs of 8 crayons can you make using crayons that come in red, blue and yellow?</p></li>
+</ol></article><article class="exercise-like" id="lNv"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=72&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChccmVuZXdjb21tYW5ke1x2fXtcdnR4e2Fib3ZlfXt9fVxuZXdjb21tYW5ke1xsdH17PH1cKUApKTsKQ29udGV4dCgiSW50ZWdlckZ1bmN0aW9ucyIpOwokYW5zMSA9IENvbXB1dGUoIkMoMTAsNSkiKTsKJGFuczIgPSBDb21wdXRlKCJDKDE0LDUpIik7CgpCRUdJTl9QR01MCkNvbnNpZGVyIGZ1bmN0aW9ucyBbYGY6XHsxLDIsMyw0LDVcfSBcdG8gXHswLDEsMixcbGRvdHMsOVx9XHRleHR7Ln1gXQphLiAgSG93IG1hbnkgb2YgdGhlc2UgZnVuY3Rpb25zIGFyZSBzdHJpY3RseSBpbmNyZWFzaW5nPyBFeHBsYWluLiAoQSBmdW5jdGlvbiBpcyBzdHJpY3RseSBpbmNyZWFzaW5nIHByb3ZpZGVkIGlmIFtgYSBcbHQgYlx0ZXh0eyx9YF0gdGhlbiBbYGYoYSkgXGx0IGYoYilcdGV4dHsufWBdKQoKICAgIFtfX19fX117JGFuczF9CgoKYS4gIEhvdyBtYW55IG9mIHRoZSBmdW5jdGlvbnMgYXJlIG5vbi1kZWNyZWFzaW5nPyBFeHBsYWluLiAoQSBmdW5jdGlvbiBpcyBub24tZGVjcmVhc2luZyBwcm92aWRlZCBpZiBbYGEgXGx0IGJcdGV4dHssfWBdIHRoZW4gW2BmKGEpIFxsZSBmKGIpXHRleHR7Ln1gXSkKCiAgICBbX19fX19deyRhbnMyfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2B7MTAgXGNob29zZSA1fVx0ZXh0ey59YF0gTm90ZSB0aGF0IGEgc3RyaWN0bHkgaW5jcmVhc2luZyBmdW5jdGlvbiBpcyBhdXRvbWF0aWNhbGx5IGluamVjdGl2ZS4KCgphLiAgW2B7MTQgXGNob29zZSA5fVx0ZXh0ey59YF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article><article class="exercise-like" id="RUE"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<iframe width="100%" src="https://webwork-dev.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=73&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0SW50ZWdlckZ1bmN0aW9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIkludGVnZXJGdW5jdGlvbnMiKTsKJGFuczEgPSBDb21wdXRlKCJDKDIwLDQpIik7CiRhbnMyID0gQ29tcHV0ZSgiUCgyMCw0KSIpOwokYW5zMyA9IENvbXB1dGUoIkMoMjMsNCkiKTsKJGFuczQgPSBDb21wdXRlKCIyMF40Iik7CgpCRUdJTl9QR01MCl9Db25pY18sIHlvdXIgZmF2b3JpdGUgbWF0aCB0aGVtZWQgZmFzdCBmb29kIGRyaXZlLWluIG9mZmVycyAyMCBmbGF2b3JzIHdoaWNoIGNhbiBiZSBhZGRlZCB0byB5b3VyIHNvZGEuIFlvdSBoYXZlIGVub3VnaCBtb25leSB0byBidXkgYSBsYXJnZSBzb2RhIHdpdGggNCBhZGRlZCBmbGF2b3JzLiBIb3cgbWFueSBkaWZmZXJlbnQgc29kYSBjb25jb2N0aW9ucyBjYW4geW91IG9yZGVyIGlmOgphLiAgWW91IHJlZnVzZSB0byB1c2UgYW55IG9mIHRoZSBmbGF2b3JzIG1vcmUgdGhhbiBvbmNlPwoKICAgIFtfX19fX117JGFuczF9CgoKYS4gIFlvdSByZWZ1c2UgcmVwZWF0cyBidXQgY2FyZSBhYm91dCB0aGUgb3JkZXIgdGhlIGZsYXZvcnMgYXJlIGFkZGVkPwoKICAgIFtfX19fX117JGFuczJ9CgoKYS4gIFlvdSBhbGxvdyB5b3Vyc2VsZiBtdWx0aXBsZSBzaG90cyBvZiB0aGUgc2FtZSBmbGF2b3I%2FCgogICAgW19fX19fXXskYW5zM30KCgphLiAgWW91IGFsbG93IHlvdXJzZWxmIG11bHRpcGxlIHNob3RzLCBhbmQgY2FyZSBhYm91dCB0aGUgb3JkZXIgdGhlIGZsYXZvcnMgYXJlIGFkZGVkPwoKICAgIFtfX19fX117JGFuczR9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYHsyMCBcY2hvb3NlIDR9YF0gc29kYXMgKG9yZGVyIGRvZXMgbm90IG1hdHRlciBhbmQgcmVwZWF0cyBhcmUgbm90IGFsbG93ZWQpLgoKCmEuICBbYFAoMjAsIDQpID0gMjBcY2RvdCAxOVxjZG90IDE4IFxjZG90IDE3YF0gc29kYXMgKG9yZGVyIG1hdHRlcnMgYW5kIHJlcGVhdHMgYXJlIG5vdCBhbGxvd2VkKS4KCgphLiAgW2B7MjMgXGNob29zZSA0fWBdIHNvZGFzIChvcmRlciBkb2VzIG5vdCBtYXR0ZXIgYW5kIHJlcGVhdHMgYXJlIGFsbG93ZWQ7IDQgc3RhcnMgYW5kIDE5IGJhcnMpLgoKCmEuICBbYDIwXjRgXSBzb2RhcyAob3JkZXIgbWF0dGVycyBhbmQgcmVwZWF0cyBhcmUgYWxsb3dlZDsgMjAgY2hvaWNlcyA0IHRpbWVzKS4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-dev.aimath.org"]})</script></article></section></section></div></main>
+</div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

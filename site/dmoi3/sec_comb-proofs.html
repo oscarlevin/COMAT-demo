@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-01-01T10:47:32-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Combinatorial Proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:uw-slr5ay1u';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-5.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics</span><span class="subtitle">An Open Introduction, 3rd edition</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_counting-combperm.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_stars-and-bars.html" title="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_counting-combperm.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_stars-and-bars.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="qaP"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="WhY">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="Cph">How to use this book</a></li>
+</ul>
+<h2 class="link"><a href="ch_intro.html" data-scroll="csJ"><span class="codenumber">0</span> <span class="title">Introduction and Preliminaries</span></a></h2>
+<ul>
+<li><a href="sec_intro-intro.html" data-scroll="NGK">What is Discrete Mathematics?</a></li>
+<li><a href="sec_intro-statements.html" data-scroll="xzK">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="leb">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="BUV">Functions</a></li>
+</ul>
+<h2 class="link"><a href="ch_counting.html" data-scroll="Pux"><span class="codenumber">1</span> <span class="title">Counting</span></a></h2>
+<ul>
+<li><a href="sec_counting-addmult.html" data-scroll="VUd">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="Zkv">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="Hvm">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="ItB" class="active">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="fJO">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="kVX">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="qLw">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_sequences.html" data-scroll="iRP"><span class="codenumber">2</span> <span class="title">Sequences</span></a></h2>
+<ul>
+<li><a href="sec_seq_intro.html" data-scroll="mrl">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="QQl">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="Skm">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="vbq">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="jpB">Induction</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="rZt">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_logic.html" data-scroll="UOk"><span class="codenumber">3</span> <span class="title">Symbolic Logic and Proofs</span></a></h2>
+<ul>
+<li><a href="sec_propositional.html" data-scroll="suF">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="Ves">Proofs</a></li>
+<li><a href="sec_logic-conc.html" data-scroll="uMv">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_graphtheory.html" data-scroll="EVs"><span class="codenumber">4</span> <span class="title">Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_gt-intro.html" data-scroll="RdG">Definitions</a></li>
+<li><a href="sec_trees.html" data-scroll="sec_trees">Trees</a></li>
+<li><a href="sec_planar.html" data-scroll="ctW">Planar Graphs</a></li>
+<li><a href="sec_coloring.html" data-scroll="fYj">Coloring</a></li>
+<li><a href="sec_paths.html" data-scroll="cPv">Euler Paths and Circuits</a></li>
+<li><a href="sec_matchings.html" data-scroll="MWD">Matching in Bipartite Graphs</a></li>
+<li><a href="sec_gt-conc.html" data-scroll="Dab">Chapter Summary</a></li>
+</ul>
+<h2 class="link"><a href="ch_additionalTopics.html" data-scroll="jno"><span class="codenumber">5</span> <span class="title">Additional Topics</span></a></h2>
+<ul>
+<li><a href="sec_addtops-genfun.html" data-scroll="ShZ">Generating Functions</a></li>
+<li><a href="sec_addtops-numbth.html" data-scroll="JFy">Introduction to Number Theory</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="qRN"><span class="title">Backmatter</span></a></h2>
+<h2 class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></h2>
+<h2 class="link"><a href="solutions-2.html" data-scroll="WYW"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></h2>
+<h2 class="link"><a href="appendix-1.html" data-scroll="KKE"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></h2>
+<h2 class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></h2>
+<h2 class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="ItB"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Combinatorial Proofs</span>
+</h2>
+<a href="sec_comb-proofs.html" class="permalink">¶</a><section class="introduction" id="ebF"><article class="project-like" id="KiO"><h6 class="heading">
+<span class="type">Investigate!</span> <span class="codenumber">1.5</span>
+</h6>
+<ol id="QWp" class="decimal">
+<li id="VrN">
+<p id="PCB">The Stanley Cup is decided in a best of 7 tournament between two teams. In how many ways can your team win? Let's answer this question two ways:</p>
+<ol class="lower-alpha">
+<li id="Tvw"><p id="non">How many of the 7 games does your team need to win? How many ways can this happen?</p></li>
+<li id="ByW"><p id="vJK">What if the tournament goes all 7 games? So you win the last game. How many ways can the first 6 games go down?</p></li>
+<li id="hGf"><p id="bQT">What if the tournament goes just 6 games? How many ways can this happen? What about 5 games? 4 games?</p></li>
+<li id="NNo"><p id="HYc">What are the two different ways to compute the number of ways your team can win? Write down an equation involving binomial coefficients (that is, \({n \choose k}\)'s). What pattern in Pascal's triangle is this an example of?</p></li>
+</ol>
+</li>
+<li id="jvs"><p id="ofl">Generalize. What if the rules changed and you played a best of \(9\) tournament (5 wins required)? What if you played an \(n\) game tournament with \(k\) wins required to be named champion?</p></li>
+</ol></article></section><section class="subsection" id="oAK"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Patterns in Pascal's Triangle</span>
+</h3>
+<a href="sec_comb-proofs.html#oAK" class="permalink">¶</a><p id="xdy">Have a look again at Pascal's triangle. Forget for a moment where it comes from. Just look at it as a mathematical object. What do you notice?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/pascal-small.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="dkH">There are lots of patterns hidden away in the triangle, enough to fill a reasonably sized book. Here are just a few of the most obvious ones:</p>
+<ol class="decimal">
+<li id="tUx"><p id="Umu">The entries on the border of the triangle are all 1.</p></li>
+<li id="abG"><p id="AtD">Any entry not on the border is the sum of the two entries above it.</p></li>
+<li id="GiP"><p id="gAM">The triangle is symmetric. In any row, entries on the left side are mirrored on the right side.</p></li>
+<li id="mpY"><p id="MHV">The sum of all entries on a given row is a power of 2. (You should check this!)</p></li>
+</ol>
+<p id="JrQ">We would like to state these observations in a more precise way, and then prove that they are correct. Now each entry in Pascal's triangle is in fact a binomial coefficient. The 1 on the very top of the triangle is \({0 \choose 0}\text{.}\) The next row (which we will call row 1, even though it is not the top-most row) consists of \({1 \choose 0}\) and \({1 \choose 1}\text{.}\) Row 4 (the row 1, 4, 6, 4, 1) consists of the binomial coefficients</p>
+<div class="displaymath">
+\begin{equation*}
+{4 \choose 0} ~~ {4 \choose 1} ~~ {4 \choose 2} ~~ {4 \choose 3} ~~ {4 \choose 4}\text{.}
+\end{equation*}
+</div>
+<p id="pyZ">Given this description of the elements in Pascal's triangle, we can rewrite the above observations as follows:</p>
+<ol class="decimal">
+<li id="Sxh">\({n \choose 0} = 1\) and \({n \choose n} = 1\text{.}\)</li>
+<li id="yEq">\({n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}\text{.}\)</li>
+<li id="eLz">\({n \choose k} = {n \choose n-k}\text{.}\)</li>
+<li id="KSI">\({n\choose 0} + {n \choose 1} + {n \choose 2} + \cdots + {n \choose n} = 2^n\text{.}\)</li>
+</ol>
+<p id="VGi">Each of these is an example of a <dfn class="terminology">binomial identity</dfn>  : an identity (i.e., equation) involving binomial coefficients.</p>
+<p id="BNr">Our goal is to establish these identities. We wish to prove that they hold for all values of \(n\) and \(k\text{.}\) These proofs can be done in many ways. One option would be to give algebraic proofs, using the formula for \({n \choose k}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose k} = \frac{n!}{(n-k)!\,k!}\text{.}
+\end{equation*}
+</div>
+<p id="hUA">Here's how you might do that for the second identity above.</p>
+<article class="example-like" id="APc"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.1</span>
+</h6>
+<p id="zYe">Give an algebraic proof for the binomial identity</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-qpX" id="qpX"><span class="type">Solution</span></a><div id="hk-qpX" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="Wxg"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="lkF">By the definition of \({n \choose k}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+{n-1 \choose k-1} = \frac{(n-1)!}{(n-1-(k-1))!(k-1)!} = \frac{(n-1)!}{(n-k)!(k-1)!}
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+{n-1 \choose k} = \frac{(n-1)!}{(n-1-k)!k!}\text{.}
+\end{equation*}
+</div>
+<p id="RrO">Thus, starting with the right-hand side of the equation:</p>
+<div class="displaymath">
+\begin{align*}
+{n-1 \choose k-1} + {n-1 \choose k} \amp = \frac{(n-1)!}{(n-k)!(k-1)!}+ \frac{(n-1)!}{(n-1-k)!\,k!}\\
+\amp = \frac{(n-1)!k}{(n-k)!\,k!} + \frac{(n-1)!(n-k)}{(n-k)!\,k!}\\
+\amp = \frac{(n-1)!(k+n-k)}{(n-k)!\,k!}\\
+\amp = \frac{n!}{(n-k)!\, k!}\\
+\amp = {n \choose k}\text{.}
+\end{align*}
+</div>
+<p id="xyX">The second line (where the common denominator is found) works because \(k(k-1)! = k!\) and \((n-k)(n-k-1)! = (n-k)!\text{.}\)</p></article></div></div>
+</div></article><p id="ObJ">This is certainly a valid proof, but also is entirely useless. Even if you understand the proof perfectly, it does not tell you <em class="emphasis">why</em> the identity is true. A better approach would be to explain what \({n \choose k}\) <em class="emphasis">means</em> and then say why that is also what \({n-1 \choose k-1} + {n-1 \choose k}\) means. Let's see how this works for the four identities we observed above.</p>
+<article class="example-like" id="gWl"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.2</span>
+</h6>
+<p id="gfn">Explain why \({n \choose 0} = 1\) and \({n \choose n} = 1\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-CEp" id="CEp"><span class="type">Solution</span></a><div id="hk-CEp" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="dGg">What do these binomial coefficients tell us? Well, \({n \choose 0}\) gives the number of ways to select 0 objects from a collection of \(n\) objects. There is only one way to do this, namely to not select any of the objects. Thus \({n \choose 0} = 1\text{.}\) Similarly, \({n \choose n}\) gives the number of ways to select \(n\) objects from a collection of \(n\) objects. There is only one way to do this: select all \(n\) objects. Thus \({n \choose n} = 1\text{.}\)</p>
+<p id="JNp">Alternatively, we know that \({n \choose 0}\) is the number of \(n\)-bit strings with weight 0. There is only one such string, the string of all 0's. So \({n \choose 0} = 1\text{.}\) Similarly \({n \choose n}\) is the number of \(n\)-bit strings with weight \(n\text{.}\) There is only one string with this property, the string of all 1's.</p>
+<p id="pUy">Another way: \({n \choose 0}\) gives the number of subsets of a set of size \(n\) containing 0 elements. There is only one such subset, the empty set. \({n \choose n}\) gives the number of subsets containing \(n\) elements. The only such subset is the original set (of all elements).</p>
+</div></div>
+</div></article><article class="example-like" id="Ndu"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.3</span>
+</h6>
+<p id="Mmw">Explain why \({n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-iLy" id="iLy"><span class="type">Solution</span></a><div id="hk-iLy" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="WbH">The easiest way to see this is to consider bit strings. \({n \choose k}\) is the number of bit strings of length \(n\) containing \(k\) 1's. Of all of these strings, some start with a 1 and the rest start with a 0. First consider all the bit strings which start with a 1. After the 1, there must be \(n-1\) more bits (to get the total length up to \(n\)) and exactly \(k-1\) of them must be 1's (as we already have one, and we need \(k\) total). How many strings are there like that? There are exactly \({n-1 \choose k-1}\) such bit strings, so of all the length \(n\) bit strings containing \(k\) 1's, \({n-1 \choose k-1}\) of them start with a 1. Similarly, there are \({n-1\choose k}\) which start with a 0 (we still need \(n-1\) bits and now \(k\) of them must be 1's). Since there are \({n-1 \choose k}\) bit strings containing \(n-1\) bits with \(k\) 1's, that is the number of length \(n\) bit strings with \(k\) 1's which start with a 0. Therefore \({n \choose k} = {n-1\choose k-1} + {n-1 \choose k}\text{.}\)</p>
+<p id="CiQ">Another way: consider the question, how many ways can you select \(k\) pizza toppings from a menu containing \(n\) choices? One way to do this is just \({n \choose k}\text{.}\) Another way to answer the same question is to first decide whether or not you want anchovies. If you do want anchovies, you still need to pick \(k-1\) toppings, now from just \(n-1\) choices. That can be done in \({n-1 \choose k-1}\) ways. If you do not want anchovies, then you still need to select \(k\) toppings from \(n-1\) choices (the anchovies are out). You can do that in \({n-1 \choose k}\) ways. Since the choices with anchovies are disjoint from the choices without anchovies, the total choices are \({n-1 \choose k-1}+{n-1 \choose k}\text{.}\) But wait. We answered the same question in two different ways, so the two answers must be the same. Thus \({n \choose k} = {n-1\choose k-1} + {n-1 \choose k}\text{.}\)</p>
+<p id="ipZ">You can also explain (prove) this identity by counting subsets, or even lattice paths.</p>
+</div></div>
+</div></article><article class="example-like" id="tkD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.4</span>
+</h6>
+<p id="stF">Prove the binomial identity \({n \choose k} = {n \choose n-k}\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-OSH" id="OSH"><span class="type">Solution</span></a><div id="hk-OSH" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="Oxi">Why is this true? \({n \choose k}\) counts the number of ways to select \(k\) things from \(n\) choices. On the other hand, \({n \choose n-k}\) counts the number of ways to select \(n-k\) things from \(n\) choices. Are these really the same? Well, what if instead of selecting the \(n-k\) things you choose to exclude them. How many ways are there to choose \(n-k\) things to exclude from \(n\) choices. Clearly this is \({n \choose n-k}\) as well (it doesn't matter whether you include or exclude the things once you have chosen them). And if you exclude \(n-k\) things, then you are including the other \(k\) things. So the set of outcomes should be the same.</p>
+<p id="uEr">Let's try the pizza counting example like we did above. How many ways are there to pick \(k\) toppings from a list of \(n\) choices? On the one hand, the answer is simply \({n \choose k}\text{.}\) Alternatively, you could make a list of all the toppings you don't want. To end up with a pizza containing exactly \(k\) toppings, you need to pick \(n-k\) toppings to not put on the pizza. You have \({n \choose n-k}\) choices for the toppings you don't want. Both of these ways give you a pizza with \(k\) toppings, in fact all the ways to get a pizza with \(k\) toppings. Thus these two answers must be the same: \({n \choose k} = {n \choose n-k}\text{.}\)</p>
+<p id="aLA">You can also prove (explain) this identity using bit strings, subsets, or lattice paths. The bit string argument is nice: \({n \choose k}\) counts the number of bit strings of length \(n\) with \(k\) 1's. This is also the number of bit string of length \(n\) with \(k\) 0's (just replace each 1 with a 0 and each 0 with a 1). But if a string of length \(n\) has \(k\) 0's, it must have \(n-k\) 1's. And there are exactly \({n\choose n-k}\) strings of length \(n\) with \(n-k\) 1's.</p>
+</div></div>
+</div></article><article class="example-like" id="ZrM"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.5</span>
+</h6>
+<p id="YAO">Prove the binomial identity \({n\choose 0} + {n \choose 1} + {n\choose 2} + \cdots + {n \choose n} = 2^n\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-uZQ" id="uZQ"><span class="type">Solution</span></a><div id="hk-uZQ" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="GSJ">Let's do a “pizza proof” again. We need to find a question about pizza toppings which has \(2^n\) as the answer. How about this: If a pizza joint offers \(n\) toppings, how many pizzas can you build using any number of toppings from no toppings to all toppings, using each topping at most once?</p>
+<p id="mZS">On one hand, the answer is \(2^n\text{.}\) For each topping you can say “yes” or “no,” so you have two choices for each topping.</p>
+<p id="Thb">On the other hand, divide the possible pizzas into disjoint groups: the pizzas with no toppings, the pizzas with one topping, the pizzas with two toppings, etc. If we want no toppings, there is only one pizza like that (the empty pizza, if you will) but it would be better to think of that number as \({n \choose 0}\) since we choose 0 of the \(n\) toppings. How many pizzas have 1 topping? We need to choose 1 of the \(n\) toppings, so \({n \choose 1}\text{.}\) We have:</p>
+<ul id="zok" class="disc">
+<li id="QHU">Pizzas with 0 toppings: \({n \choose 0}\)</li>
+<li id="wPd">Pizzas with 1 topping: \({n \choose 1}\)</li>
+<li id="cWm">Pizzas with 2 toppings: \({n \choose 2}\)</li>
+<li id="Jdv">\(\vdots\)</li>
+<li id="pkE">Pizzas with \(n\) toppings: \({n \choose n}\text{.}\)</li>
+</ul>
+<p id="fvt">The total number of possible pizzas will be the sum of these, which is exactly the left-hand side of the identity we are trying to prove.</p>
+<p id="LCC">Again, we could have proved the identity using subsets, bit strings, or lattice paths (although the lattice path argument is a little tricky).</p>
+</div></div>
+</div></article><p id="uiS">Hopefully this gives some idea of how explanatory proofs of binomial identities can go. It is worth pointing out that more traditional proofs can also be beautiful.<a knowl="" class="id-ref" refid="hk-fn-6" id="fn-6"><sup> 3 </sup></a><span id="hk-fn-6" class="hidden-content tex2jax_ignore"><span class="footnote">Most every binomial identity can be proved using mathematical induction, using the recursive definition for \({n \choose k}\text{.}\) We will discuss induction in <a href="sec_seq-induction.html" class="xref" title="Section 2.5: Induction">Section 2.5</a>.</span></span> For example, consider the following rather slick proof of the last identity.</p>
+<p id="aqb">Expand the binomial \((x+y)^n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(x + y)^n = {n \choose 0}x^n + {n \choose 1}x^{n-1}y + {n \choose 2}x^{n-2}y^2 + \cdots + {n \choose n-1}x\cdot y^n + {n \choose n}y^n\text{.}
+\end{equation*}
+</div>
+<p id="Gxk">Let \(x = 1\) and \(y = 1\text{.}\) We get:</p>
+<div class="displaymath">
+\begin{equation*}
+(1 + 1)^n = {n \choose 0}1^n + {n \choose 1}1^{n-1}1 + {n \choose 2}1^{n-2}1^2 + \cdots + {n \choose n-1}1\cdot 1^n + {n \choose n}1^n\text{.}
+\end{equation*}
+</div>
+<p id="mEt">Of course this simplifies to:</p>
+<div class="displaymath">
+\begin{equation*}
+(2)^n = {n \choose 0} + {n \choose 1} + {n \choose 2} + \cdots + {n \choose n-1} + {n \choose n}\text{.}
+\end{equation*}
+</div>
+<p id="SLC">Something fun to try: Let \(x = 1\) and \(y = 2\text{.}\) Neat huh?</p></section><section class="subsection" id="UHT"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">More Proofs</span>
+</h3>
+<a href="sec_comb-proofs.html#UHT" class="permalink">¶</a><p id="ySL">The explanatory proofs given in the above examples are typically called <dfn class="terminology">combinatorial proofs</dfn>. In general, to give a combinatorial proof for a binomial identity, say \(A = B\) you do the following:</p>
+<ol id="eZU" class="decimal">
+<li id="qZR"><p id="sPe">Find a counting problem you will be able to answer in two ways.</p></li>
+<li id="Xha"><p id="YWn">Explain why one answer to the counting problem is \(A\text{.}\)</p></li>
+<li id="Doj"><p id="Fdw">Explain why the other answer to the counting problem is \(B\text{.}\)</p></li>
+</ol>
+<p id="Lhd">Since both \(A\) and \(B\) are the answers to the same question, we must have \(A = B\text{.}\)</p>
+<p id="rom">The tricky thing is coming up with the question. This is not always obvious, but it gets easier the more counting problems you solve. You will start to recognize types of answers as the answers to types of questions. More often what will happen is you will be solving a counting problem and happen to think up two different ways of finding the answer. Now you have a binomial identity and the proof is right there. The proof <em class="emphasis">is</em> the problem you just solved together with your two solutions.</p>
+<p id="Xvv">For example, consider this counting question:</p>
+<blockquote class="blockquote" id="fQS"><p id="TQV">How many 10-letter words use exactly four A's, three B's, two C's and one D?</p></blockquote>
+<p id="DCE">Let's try to solve this problem. We have 10 spots for letters to go. Four of those need to be A's. We can pick the four A-spots in \({10 \choose 4}\) ways. Now where can we put the B's? Well there are only 6 spots left, we need to pick \(3\) of them. This can be done in \({6 \choose 3}\) ways. The two C's need to go in two of the 3 remaining spots, so we have \({3 \choose 2}\) ways of doing that. That leaves just one spot of the D, but we could write that 1 choice as \({1 \choose 1}\text{.}\) Thus the answer is:</p>
+<div class="displaymath">
+\begin{equation*}
+{10 \choose 4}{6 \choose 3}{3 \choose 2}{1 \choose 1}\text{.}
+\end{equation*}
+</div>
+<p id="jJN">But why stop there? We can find the answer another way too. First let's decide where to put the one D: we have 10 spots, we need to choose 1 of them, so this can be done in \({10 \choose 1}\) ways. Next, choose one of the \({9 \choose 2}\) ways to place the two C's. We now have \(7\) spots left, and three of them need to be filled with B's. There are \({7 \choose 3}\) ways to do this. Finally the A's can be placed in \({4 \choose 4}\) (that is, only one) ways. So another answer to the question is</p>
+<div class="displaymath">
+\begin{equation*}
+{10 \choose 1}{9 \choose 2}{7 \choose 3}{4 \choose 4}\text{.}
+\end{equation*}
+</div>
+<p id="PQW">Interesting. This gives us the binomial identity:</p>
+<div class="displaymath">
+\begin{equation*}
+{10 \choose 4}{6 \choose 3}{3 \choose 2}{1 \choose 1} = {10 \choose 1}{9 \choose 2}{7 \choose 3}{4 \choose 4}\text{.}
+\end{equation*}
+</div>
+<p id="vYf">Here are a couple more binomial identities with combinatorial proofs.</p>
+<article class="example-like" id="lGe"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.6</span>
+</h6>
+<p id="EHX">Prove the identity</p>
+<div class="displaymath">
+\begin{equation*}
+1 n + 2(n-1) + 3 (n-2) + \cdots + (n-1) 2 + n 1 = {n+2 \choose 3}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-bgZ" id="bgZ"><span class="type">Solution</span></a><div id="hk-bgZ" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="rJL">To give a combinatorial proof we need to think up a question we can answer in two ways: one way needs to give the left-hand-side of the identity, the other way needs to be the right-hand-side of the identity. Our clue to what question to ask comes from the right-hand side: \({n+2 \choose 3}\) counts the number of ways to select 3 things from a group of \(n+2\) things. Let's name those things \(1, 2, 3, \ldots, n+2\text{.}\) In other words, we want to find 3-element subsets of those numbers (since order should not matter, subsets are exactly the right thing to think about). We will have to be a bit clever to explain why the left-hand-side also gives the number of these subsets. Here's the proof.</p>
+<article class="proof" id="Hoi"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="XQU">Consider the question “How many 3-element subsets are there of the set \(\{1,2,3,\ldots,
+n+2\}\text{?}\)” We answer this in two ways:</p>
+<p id="DYd">Answer 1: We must select 3 elements from the collection of \(n+2\) elements. This can be done in \({n+2 \choose 3}\) ways.</p>
+<p id="kfm">Answer 2: Break this problem up into cases by what the middle number in the subset is. Say each subset is \(\{a,b,c\}\) written in increasing order. We count the number of subsets for each distinct value of \(b\text{.}\) The smallest possible value of \(b\) is \(2\text{,}\) and the largest is \(n+1\text{.}\)</p>
+<p id="Qmv">When \(b = 2\text{,}\) there are \(1 \cdot n\) subsets: 1 choice for \(a\) and \(n\) choices (3 through \(n+2\)) for \(c\text{.}\)</p>
+<p id="wtE">When \(b = 3\text{,}\) there are \(2 \cdot (n-1)\) subsets: 2 choices for \(a\) and \(n-1\) choices for \(c\text{.}\)</p>
+<p id="cAN">When \(b = 4\text{,}\) there are \(3 \cdot (n-2)\) subsets: 3 choices for \(a\) and \(n-2\) choices for \(c\text{.}\)</p>
+<p id="IHW">And so on. When \(b = n+1\text{,}\) there are \(n\) choices for \(a\) and only 1 choice for \(c\text{,}\) so \(n \cdot 1\) subsets.</p>
+<p id="oPf">Therefore the total number of subsets is</p>
+<div class="displaymath">
+\begin{equation*}
+1 n + 2 (n-1) + 3 (n-2) + \cdots + (n-1)2 + n 1\text{.}
+\end{equation*}
+</div>
+<p id="UWo">Since Answer 1 and Answer 2 are answers to the same question, they must be equal. Therefore</p>
+<div class="displaymath">
+\begin{equation*}
+1 n + 2 (n-1) + 3 (n-2) + \cdots + (n-1) 2 + n 1 = {n+2 \choose 3}\text{.}
+\end{equation*}
+</div></article>
+</div></div>
+</div></article><article class="example-like" id="RNn"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.7</span>
+</h6>
+<p id="kPg">Prove the binomial identity</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2 = {2n \choose n}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-nvr" id="nvr"><span class="type">Solution</span></a><div id="hk-nvr" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="Bdx">We will give two different proofs of this fact. The first will be very similar to the previous example (counting subsets). The second proof is a little slicker, using lattice paths.</p>
+<article class="proof" id="TCA"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="hkG">Consider the question: “How many pizzas can you make using \(n\) toppings when there are \(2n\) toppings to choose from?”</p>
+<p id="NrP">Answer 1: There are \(2n\) toppings, from which you must choose \(n\text{.}\) This can be done in \({2n \choose n}\) ways.</p>
+<p id="tyY">Answer 2: Divide the toppings into two groups of \(n\) toppings (perhaps \(n\) meats and \(n\) veggies). Any choice of \(n\) toppings must include some number from the first group and some number from the second group. Consider each possible number of meat toppings separately:</p>
+<p id="ZGh">0 meats: \({n \choose 0}{n \choose n}\text{,}\) since you need to choose 0 of the \(n\) meats and \(n\) of the \(n\) veggies.</p>
+<p id="FNq">1 meat: \({n \choose 1}{n \choose n-1}\text{,}\) since you need 1 of \(n\) meats so \(n-1\) of \(n\) veggies.</p>
+<p id="lUz">2 meats: \({n \choose 2}{n \choose n-2}\text{.}\) Choose 2 meats and the remaining \(n-2\) toppings from the \(n\) veggies.</p>
+<p id="SbI">And so on. The last case is \(n\) meats, which can be done in \({n \choose n}{n \choose 0}\) ways.</p>
+<p id="yiR">Thus the total number of pizzas possible is</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0}{n \choose n} + {n \choose 1}{n \choose n-1} + {n \choose 2}{n \choose n-2} + \cdots + {n \choose n}{n \choose 0}\text{.}
+\end{equation*}
+</div>
+<p id="eqa">This is not quite the left-hand side … yet. Notice that \({n \choose n} = {n \choose 0}\) and \({n \choose n-1} = {n  \choose 1}\) and so on, by the identity in <a knowl="./knowl/example-symmetry-formula.html" title="Example 1.4.4">Example 1.4.4</a>. Thus we do indeed get</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2\text{.}
+\end{equation*}
+</div>
+<p id="Kxj">Since these two answers are answers to the same question, they must be equal, and thus</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2 = {2n \choose n}\text{.}
+\end{equation*}
+</div></article><p id="qEs">For an alternative proof, we use lattice paths. This is reasonable to consider because the right-hand side of the identity reminds us of the number of paths from \((0,0)\) to \((n,n)\text{.}\)</p>
+<article class="proof" id="zJJ"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="WLB">Consider the question: How many lattice paths are there from \((0,0)\) to \((n,n)\text{?}\)</p>
+<p id="CSK">Answer 1: We must travel \(2n\) steps, and \(n\) of them must be in the up direction. Thus there are \({2n \choose n}\) paths.</p>
+<p id="iZT">Answer 2: Note that any path from \((0,0)\) to \((n,n)\) must cross the line \(x + y = n\text{.}\) That is, any path must pass through exactly one of the points: \((0,n)\text{,}\) \((1,n-1)\text{,}\) \((2,n-2)\text{,}\) …, \((n, 0)\text{.}\) For example, this is what happens in the case \(n = 4\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/lattice-paths-comb-proof.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="Phc">How many paths pass through \((0,n)\text{?}\) To get to that point, you must travel \(n\) units, and \(0\) of them are to the right, so there are \({n \choose 0}\) ways to get to \((0,n)\text{.}\) From \((0,n)\) to \((n,n)\) takes \(n\) steps, and \(0\) of them are up. So there are \({n \choose 0}\) ways to get from \((0,n)\) to \((n,n)\text{.}\) Therefore there are \({n \choose 0}{n \choose 0}\) paths from \((0,0)\) to \((n,n)\) through the point \((0,n)\text{.}\)</p>
+<p id="vol">What about through \((1,n-1)\text{.}\) There are \({n \choose 1}\) paths to get there (\(n\) steps, 1 to the right) and \({n \choose 1}\) paths to complete the journey to \((n,n)\) (\(n\) steps, \(1\) up). So there are \({n \choose 1}{n \choose 1}\) paths from \((0,0)\) to \((n,n)\) through \((1,n-1)\text{.}\)</p>
+<p id="bvu">In general, to get to \((n,n)\) through the point \((k,n-k)\) we have \({n \choose k}\) paths to the midpoint and then \({n \choose k}\) paths from the midpoint to \((n,n)\text{.}\) So there are \({n \choose k}{n \choose k}\) paths from \((0,0)\) to \((n,n)\) through \((k, n-k)\text{.}\)</p>
+<p id="HCD">All together then the total paths from \((0,0)\) to \((n,n)\) passing through exactly one of these midpoints is</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2\text{.}
+\end{equation*}
+</div>
+<p id="nJM">Since these two answers are answers to the same question, they must be equal, and thus</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2 = {2n \choose n}\text{.}
+\end{equation*}
+</div></article>
+</div></div>
+</div></article></section><section class="exercises" id="ctJ"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_comb-proofs.html#ctJ" class="permalink">¶</a><article class="exercise-like" id="WiL"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="GbL">Give a combinatorial proof of the identity \(2+2+2 = 3\cdot 2\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-tGc" id="tGc"><span class="type">Solution</span></a><div id="hk-tGc" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="ZNl"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="dkH">Question: How many 2-letter words start with <em class="emphasis">a</em>, <em class="emphasis">b</em>, or <em class="emphasis">c</em> and end with either <em class="emphasis">y</em> or <em class="emphasis">z</em>?</p>
+<p id="JrQ">Answer 1: There are two words that start with <em class="emphasis">a</em>, two that start with <em class="emphasis">b</em>, two that start with <em class="emphasis">c</em>, for a total of \(2+2+2\text{.}\)</p>
+<p id="pyZ">Answer 2: There are three choices for the first letter and two choices for the second letter, for a total of \(3 \cdot 2\text{.}\)</p>
+<p id="VGi">Since the two answers are both answers to the same question, they are equal. Thus \(2 + 2 + 2 = 3\cdot 2\text{.}\)</p></article></div></div>
+</div></article><article class="exercise-like" id="exercise-123"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-1870">Suppose you own \(x\) fezzes and \(y\) bow ties. Of course, \(x\) and \(y\) are both greater than 1.</p>
+<ol class="lower-alpha">
+<li id="li-1156"><p id="p-1871">How many combinations of fez and bow tie can you make? You can wear only one fez and one bow tie at a time. Explain.</p></li>
+<li id="li-1157"><p id="p-1872">Explain why the answer is <em class="emphasis">also</em> \({x+y \choose 2} - {x \choose 2} - {y \choose 2}\text{.}\) (If this is what you claimed the answer was in part (a), try it again.)</p></li>
+<li id="li-1158">
+<p id="p-1873">Use your answers to parts (a) and (b) to give a combinatorial proof of the identity</p>
+<div class="displaymath">
+\begin{equation*}
+{x+y \choose 2} - {x \choose 2} - {y \choose 2} = xy
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="exercise-like" id="exercise-124"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-1874">How many triangles can you draw using the dots below as vertices?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;">
+              	\begin{tikzpicture}[scale=.75]
+              		\foreach \x in {-3,...,3}{
+              		\draw[fill] (\x,.5) circle (3pt);
+              		}
+              		\foreach \x in {-2,...,2}{
+              		\draw[fill] (90+\x*30:3.25) circle (3pt);
+              		}
+              	\end{tikzpicture}
+            </div></div></div>
+<ol id="p-1875" class="lower-alpha">
+<li id="li-1159"><p id="p-1876">Find an expression for the answer which is the sum of three terms involving binomial coefficients.</p></li>
+<li id="li-1160"><p id="p-1877">Find an expression for the answer which is the difference of two  binomial coefficients.</p></li>
+<li id="li-1161"><p id="p-1878">Generalize the above to state and prove a binomial identity using a combinatorial proof.  Say you have \(x\) points on the horizontal axis and \(y\) points in the semi-circle.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-28" id="hint-28"><span class="type">Hint</span></a><div id="hk-hint-28" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-1879">There will be 185 triangles.  But to find them …</p>
+<ol class="lower-alpha">
+<li id="li-1162"><p id="p-1880">How many vertices of the triangle can be on the horizontal axis?</p></li>
+<li id="li-1163"><p id="p-1881">Will <em class="emphasis">any</em> three dots work as the vertices?</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise-like" id="exercise-125"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-1882">Consider all the triangles you can create using the points shown below as vertices. Note, we are not allowing degenerate triangles (ones with all three vertices on the same line) but we do allow non-right triangles.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/triangle-dots-repeat.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="p-1883" class="lower-alpha">
+<li id="li-1164"><p id="p-1884">Find the number of triangles, and explain why your answer is correct.</p></li>
+<li id="li-1165"><p id="p-1885">Find the number of triangles again, using a different method. Explain why your new method works.</p></li>
+<li id="li-1166"><p id="p-1886">State a binomial identity that your two answers above establish (that is, give the binomial identity that your two answers a proof for). Then generalize this using \(m\)'s and \(n\)'s.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-29" id="hint-29"><span class="type">Hint</span></a><div id="hk-hint-29" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1887">The answer is 120.</p></div></div>
+</div></article><article class="exercise-like" id="ixd"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="Sqd">A woman is getting married. She has 15 best friends but can only select 6 of them to be her bridesmaids, one of which needs to be her maid of honor. How many ways can she do this?</p>
+<ol class="lower-alpha">
+<li id="DJI"><p id="gAM">What if she first selects the 6 bridesmaids, and then selects one of them to be the maid of honor?</p></li>
+<li id="jQR"><p id="MHV">What if she first selects her maid of honor, and then 5 other bridesmaids?</p></li>
+<li id="PYa"><p id="sPe">Explain why \(6 {15 \choose 6} = 15 {14 \choose 5}\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-SiM" id="SiM"><span class="type">Solution</span></a><div id="hk-SiM" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="ySL" class="lower-alpha">
+<li id="wfj"><p id="YWn">She has \({15 \choose 6}\) ways to select the 6 bridesmaids, and then for each way, has 6 choices for the maid of honor. Thus she has \({15 \choose 6}6\) choices.</p></li>
+<li id="cms"><p id="Fdw">She has 15 choices for who will be her maid of honor. Then she needs to select 5 of the remaining 14 friends to be bridesmaids, which she can do in \({14 \choose 5}\) ways. Thus she has \(15 {14 \choose 5}\) choices.</p></li>
+<li id="ItB"><p id="lkF">We have answered the question (how many wedding parties can the bride choose from) in two ways. The first way gives the left-hand side of the identity and the second way gives the right-hand side of the identity. Therefore the identity holds.</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-127"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-1896">Consider the identity:</p>
+<div class="displaymath">
+\begin{equation*}
+k{n\choose k} = n{n-1 \choose k-1}
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-1173"><p id="p-1897">Is this true? Try it for a few values of \(n\) and \(k\text{.}\)</p></li>
+<li id="li-1174"><p id="p-1898">Use the formula for \({n \choose k}\) to give an algebraic proof of the identity.</p></li>
+<li id="li-1175"><p id="p-1899">Give a combinatorial proof of the identity.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-30" id="hint-30"><span class="type">Hint</span></a><div id="hk-hint-30" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1900">Try <a knowl="./knowl/exc-bridesmaids.html" title="Exercise 1.4.5">Exercise 1.4.5</a></p></div></div>
+</div></article><article class="exercise-like" id="wAI"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="MAR">Give a combinatorial proof of the identity \({n \choose 2}{n-2 \choose k-2} = {n\choose k}{k \choose 2}\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-Rdt" id="Rdt"><span class="type">Hint</span></a><div id="hk-Rdt" class="hidden-content tex2jax_ignore"><div class="solution"><p id="tNt">What if you wanted a pair of co-maids-of-honor?</p></div></div>
+<a knowl="" class="id-ref" refid="hk-ypV" id="ypV"><span class="type">Solution</span></a><div id="hk-ypV" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="exe"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="eZU">Question: You have a large container filled with ping-pong balls, all with a different number on them. You must select \(k\) of the balls, putting two of them in a jar and the others in a box. How many ways can you do this?</p>
+<p id="Lhd">Answer 1: First select 2 of the \(n\) balls to put in the jar. Then select \(k-2\) of the remaining \(n-2\) balls to put in the box. The first task can be completed in \({n \choose 2}\) different ways, the second task in \({n-2 \choose k-2}\) ways. Thus there are \({n \choose 2}{n-2 \choose k-2}\) ways to select the balls.</p>
+<p id="rom">Answer 2: First select \(k\) balls from the \(n\) in the container. Then pick 2 of the \(k\) balls you picked to put in the jar, placing the remaining \(k-2\) in the box. The first task can be completed in \({n \choose k}\) ways, the second task in \({k \choose 2}\) ways. Thus there are \({n \choose k}{k \choose 2}\) ways to select the balls.</p>
+<p id="Xvv">Since both answers count the same thing, they must be equal and the identity is established.</p></article></div></div>
+</div></article><article class="exercise-like" id="exercise-129"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-1907">Consider the binomial identity</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{1} + 2 \binom{n}{2} + 3 \binom{n}{3} + \cdots + n\binom{n}{n} = n2^{n-1}\text{.}
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-1176"><p id="p-1908">Give a combinatorial proof of this identity.  Hint: What if some number of a group of $n$ people wanted to go to an escape room, and among those going, one needed to be the team captain?</p></li>
+<li id="li-1177"><p id="p-1909">Give an alternate proof by multiplying out \((1+x)^n\) and taking derivatives of both sides.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-32" id="hint-32"><span class="type">Hint</span></a><div id="hk-hint-32" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1910">For the combinatorial proof: what if you don't yet know how many bridesmaids you will have?</p></div></div>
+</div></article><article class="exercise-like" id="CpU"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="miU">Give a combinatorial proof for the identity \(1 + 2 + 3 + \cdots + n = {n+1 \choose 2}\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-33" id="hint-33"><span class="type">Hint</span></a><div id="hk-hint-33" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1912">Count handshakes.</p></div></div>
+</div></article><article class="exercise-like" id="uLv"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="eEv">Consider the bit strings in \(\B^6_2\) (bit strings of length 6 and weight 2).</p>
+<ol class="lower-alpha">
+<li id="oAK"><p id="RrO">How many of those bit strings start with 1?</p></li>
+<li id="UHT"><p id="xyX">How many of those bit strings start with 01?</p></li>
+<li id="APc"><p id="dGg">How many of those bit strings start with 001?</p></li>
+<li id="gWl"><p id="JNp">Are there any other strings we have not counted yet? Which ones, and how many are there?</p></li>
+<li id="Ndu"><p id="pUy">How many bit strings are there total in \(\B^6_2\text{?}\)</p></li>
+<li id="tkD"><p id="WbH">What binomial identity have you just given a combinatorial proof for?</p></li>
+</ol></article><article class="exercise-like" id="aSE"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="KLE">Let's count <dfn class="terminology">ternary</dfn> digit strings, that is, strings in which each digit can be 0, 1, or 2.</p>
+<ol class="lower-alpha">
+<li id="KiO"><p id="uEr">How many ternary digit strings contain exactly \(n\) digits?</p></li>
+<li id="qpX"><p id="aLA">How many ternary digit strings contain exactly \(n\) digits and \(n\) 2's.</p></li>
+<li id="Wxg"><p id="GSJ">How many ternary digit strings contain exactly \(n\) digits and \(n-1\) 2's. (Hint: where can you put the non-2 digit, and then what could it be?)</p></li>
+<li id="CEp"><p id="mZS">How many ternary digit strings contain exactly \(n\) digits and \(n-2\) 2's. (Hint: see previous hint)</p></li>
+<li id="iLy"><p id="Thb">How many ternary digit strings contain exactly \(n\) digits and \(n-k\) 2's.</p></li>
+<li id="OSH"><p id="zok">How many ternary digit strings contain exactly \(n\) digits and no 2's. (Hint: what kind of a string is this?)</p></li>
+<li id="uZQ">
+<p id="fvt">Use the above parts to give a combinatorial proof for the identity</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0} + 2{n \choose 1} + 2^2{n \choose 2} + 2^3{n \choose 3} + \cdots + 2^n{n \choose n} = 3^n\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="exercise-like" id="GZN"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="qSN">How many ways are there to rearrange the letters in the word “rearrange”? Answer this question in at least two different ways to establish a binomial identity.</p></article><article class="exercise-like" id="Tof"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="Dhf">Establish the identity below using a combinatorial proof.</p>
+<div class="displaymath">
+\begin{equation*}
+{2 \choose 2}{n \choose 2} + {3 \choose 2}{n-1 \choose 2} + {4\choose 2}{n-2 \choose 2} + \cdots + {n\choose 2}{2\choose 2} = {n+3 \choose 5}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-34" id="hint-34"><span class="type">Hint</span></a><div id="hk-hint-34" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1930">This one might remind you of <a knowl="./knowl/ex-comb-proof-3elemsets.html" title="Example 1.4.6">Example 1.4.6</a></p></div></div>
+</div></article><article class="exercise-like" id="exercise-135"><h6 class="heading">
+<span class="codenumber">14</span> </h6>
+<p id="p-1931">In <a knowl="./knowl/ex-comb-proof-rowsum.html" title="Example 1.4.5">Example 1.4.5</a> we established that the sum of any row in Pascal's triangle is a power of two.  Specifically,</p>
+<div class="displaymath">
+\begin{equation*}
+{n\choose 0} + {n \choose 1} + {n\choose 2} + \cdots + {n \choose n} = 2^n\text{.}
+\end{equation*}
+</div>
+<p>The argument given there used the counting question, “how many pizzas can you build using any number of \(n\) different toppings?”  To practice, give new proofs of this identity using different questions.</p>
+<ol class="lower-alpha">
+<li id="li-1191"><p id="p-1932">Use a question about counting subsets.</p></li>
+<li id="li-1192"><p id="p-1933">Use a question about counting bit strings.</p></li>
+<li id="li-1193"><p id="p-1934">Use a question about counting lattice paths.</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-35" id="hint-35"><span class="type">Hint</span></a><div id="hk-hint-35" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1935">For the lattice paths, think about what sort of paths \(2^n\) would count.  Not all the paths will end at the same point, but you could describe the set of end points as a line.</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>
