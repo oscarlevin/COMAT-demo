@@ -3,6 +3,6 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" deploy-dir="dmoi3"/>
-    <target name="print" format="pdf" deploy-dir="dmoi3-pdf"/>
+    <target name="print" format="pdf" deploy-dir="pdfs" output-filename="main3.pdf"/>
   </targets>
 </project>
