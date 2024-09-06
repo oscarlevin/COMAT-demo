@@ -28,16 +28,19 @@ jobs:
 
             - name: build deploy targets
               run: |
-                version="$(pretext --version | cut -d '.' -f 1,2)"
-                minversion="2.5"
+                version="$(pretext --version)"
+                major="$(echo $version | cut -d '.' -f 1)"
+                minor="$(echo $version | cut -d '.' -f 2)"
                 echo "PreTeXt Version:"
                 echo $version
-                if [ "$version" -lt "$minversion" ]; then
-                    echo "PreTeXt version is less than 2.5, using old build command"
-                    pretext build
-                else
+                echo $major
+                echo $minor
+                if [[ "$major" >= "2" && "$minor" >= 5 ]]; then
                     echo "PreTeXt version is 2.5 or greater; using new build command"
                     pretext build --deploys
+                else
+                    echo "PreTeXt version is less than 2.5, using old build command"
+                    pretext build
                 fi
             - name: stage deployment
               run: pretext deploy --stage-only
