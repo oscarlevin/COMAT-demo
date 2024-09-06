@@ -29,8 +29,10 @@ jobs:
             - name: build deploy targets
               run: |
                 version="$(pretext --version | cut -d '.' -f 1,2)"
+                echo "PreTeXt Version:"
                 echo $version
-                if [[ $version < 2.5 ]]; then
+                echo "now testing version"
+                if [ "$version" -lt "2.5" ]; then
                     echo "PreTeXt version is less than 2.5, using old build command"
                     pretext build
                 else
