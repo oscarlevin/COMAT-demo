@@ -35,7 +35,7 @@ jobs:
                 echo $version
                 echo $major
                 echo $minor
-                if [[ "$major" >= "2" && "$minor" >= 5 ]]; then
+                if [ "$major" -ge 2 -a "$minor" -ge 5 ]; then
                     echo "PreTeXt version is 2.5 or greater; using new build command"
                     pretext build --deploys
                 else
