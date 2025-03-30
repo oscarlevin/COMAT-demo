@@ -4,6 +4,10 @@ wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/
 
 bash Miniforge3.sh -b -p "/conda"
 
+echo PATH="/conda/bin:$PATH" >> ~/.bashrc
+
+source ~/.bashrc
+
 conda --version
 
 mamba create --yes -n sage sage python=3.12
@@ -12,7 +16,7 @@ conda config --set auto_activate_base false
 
 conda init
 
-echo 'conda actiavete sage' >> ~/.bashrc
+echo 'conda activate sage' >> ~/.bashrc
 
 conda activate sage
 
