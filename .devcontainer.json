@@ -27,9 +27,9 @@
   },
 
   // Respect the project's designated dependencies
-  // "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "git config --global --add safe.directory $(pwd) &&pip install -r requirements.txt",
   // "postCreateCommand": "git config --global --add safe.directory $(pwd) && bash ./.github/scripts/add-sage.sh",
-  "postCreateCommand": "git config --global --add safe.directory $(pwd) && bash ./.github/scripts/add-latex.sh",
+  // "postCreateCommand": "git config --global --add safe.directory $(pwd) && bash ./.github/scripts/add-latex.sh",
 
   
   // Port forwarding
