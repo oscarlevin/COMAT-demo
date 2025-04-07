@@ -25,6 +25,9 @@ jobs:
           git config --global --add safe.directory $(pwd)
           git config user.name "${{ github.actor }} via GitHub Actions"
           git config user.email "${{ github.actor }}@github_actions.no_reply"
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: install deps
         run: pip install -r requirements.txt --break-system-packages
@@ -37,6 +40,3 @@ jobs:
 
       - name: run deploy
         run: pretext deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
