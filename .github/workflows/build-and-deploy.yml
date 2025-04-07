@@ -20,6 +20,11 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
+      - name: add gh-cli
+        run: |
+          sudo apt-get update
+          sudo apt-get install gh jq -y
+
       - name: setup git config
         run: |
           git config --global --add safe.directory $(pwd)
