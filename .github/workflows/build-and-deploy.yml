@@ -22,8 +22,8 @@ jobs:
 
       - name: add gh-cli
         run: |
-          sudo apt-get update
-          sudo apt-get install gh jq -y
+          apt-get update
+          apt-get install gh jq -y
 
       - name: setup git config
         run: |
