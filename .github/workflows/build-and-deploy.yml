@@ -22,7 +22,7 @@ jobs:
 
       - name: setup git config
         run: |
-          git status
+          git config --global --add safe.directory $(pwd)
           git config user.name "${{ github.actor }} via GitHub Actions"
           git config user.email "${{ github.actor }}@github_actions.no_reply"
 
