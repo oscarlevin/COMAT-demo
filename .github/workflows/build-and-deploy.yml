@@ -1,0 +1,54 @@
+# (delete the above line to manage this file manually)
+
+name: Build and Deploy
+on:
+  # # Runs on pull requests
+  # pull_request:
+  #     branches: ["*"]
+  # # Runs on pushes to main
+  # push:
+  #     branches: ["main"]
+  # Runs on demand
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: oscarlevin/pretext:small
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: install deps
+        run: pip install -r requirements.txt
+
+      - name: install local ptx files
+        run: pretext --version
+
+      - name: build deploy targets
+        run: |
+          version="$(pretext --version)"
+          major="$(echo $version | cut -d '.' -f 1)"
+          minor="$(echo $version | cut -d '.' -f 2)"
+          echo "PreTeXt Version:"
+          echo $version
+          echo $major
+          echo $minor
+          if [ "$major" -ge 2 -a "$minor" -ge 5 ]; then
+              echo "PreTeXt version is 2.5 or greater; using new build command"
+              pretext build --deploys
+          else
+              echo "PreTeXt version is less than 2.5, using old build command"
+              pretext build
+          fi
+
+      - name: setup git config
+        run: |
+          # setup the username and email.
+          git config user.name ${{ github.actor }}
+          git config user.email ${{ github.actor }}@users.noreply.github.com
+          
+      - name: stage deployment
+        run: pretext deploy
+
