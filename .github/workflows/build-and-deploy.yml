@@ -31,8 +31,6 @@ jobs:
           git config user.name "${{ github.actor }} via GitHub Actions"
           git config user.email "${{ github.actor }}@github_actions.no_reply"
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: install deps
         run: pip install -r requirements.txt --break-system-packages
